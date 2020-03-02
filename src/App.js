@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import "antd/dist/antd.css";
-import PatientCard from "./PatientCard";
-import SideMenu from "./SideMenu";
+import PatientPage from "./routes/patients";
+import SideMenu from "./components/SideMenu";
 
 import { Layout } from "antd";
 
@@ -15,27 +15,10 @@ const DesktopMenu = () => {
 };
 
 class App extends React.Component {
-  state = {
-    collapsedWidth: 80
-  };
-
   render() {
-    const patient = {
-      name: "Charlie",
-      job: "Janitor"
-    };
-
     return (
       <Layout style={{ minHeight: 100 + "vh" }}>
-        <Sider
-          collapsible
-          breakpoint="lg"
-          collapsedWidth={this.state.collapsedWidth}
-          onBreakpoint={broken => {
-            this.state.collapsedWidth = broken ? 0 : 80;
-            console.log(broken);
-          }}
-        >
+        <Sider collapsible breakpoint="lg">
           <div className="logo" />
           <SideMenu></SideMenu>
         </Sider>
@@ -45,16 +28,9 @@ class App extends React.Component {
               className: "trigger"
             })} */}
           </Header>
-          <Content
-            className="site-layout-background"
-            style={{
-              margin: "24px 16px",
-              padding: 24,
-              minHeight: 280
-            }}
-          >
-            <PatientCard patientData={patient}></PatientCard>
-          </Content>
+
+          <PatientPage></PatientPage>
+
           <Footer style={{ textAlign: "center" }}>FHIR Dashboard ©2020 Created by henryz00</Footer>
         </Layout>
       </Layout>
