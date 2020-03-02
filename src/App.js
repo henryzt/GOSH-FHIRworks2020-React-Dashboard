@@ -8,18 +8,17 @@ import { Layout } from "antd";
 
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Footer, Content } = Layout;
+
+const DesktopMenu = () => {
+  return <div>Example</div>;
+};
 
 class App extends React.Component {
   state = {
-    collapsed: false
+    collapsedWidth: 80
   };
 
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
   render() {
     const patient = {
       name: "Charlie",
@@ -27,17 +26,24 @@ class App extends React.Component {
     };
 
     return (
-      <Layout>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+      <Layout style={{ minHeight: 100 + "vh" }}>
+        <Sider
+          collapsible
+          breakpoint="lg"
+          collapsedWidth={this.state.collapsedWidth}
+          onBreakpoint={broken => {
+            this.state.collapsedWidth = broken ? 0 : 80;
+            console.log(broken);
+          }}
+        >
           <div className="logo" />
           <SideMenu></SideMenu>
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }}>
-            {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: "trigger",
-              onClick: this.toggle
-            })}
+            {/* {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+              className: "trigger"
+            })} */}
           </Header>
           <Content
             className="site-layout-background"
@@ -49,6 +55,7 @@ class App extends React.Component {
           >
             <PatientCard patientData={patient}></PatientCard>
           </Content>
+          <Footer style={{ textAlign: "center" }}>FHIR Dashboard ©2020 Created by henryz00</Footer>
         </Layout>
       </Layout>
     );
