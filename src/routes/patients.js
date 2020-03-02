@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PatientCard from "../components/PatientCard";
 import request from "../javascript/api";
-import { Layout } from "antd";
+import { Layout, message } from "antd";
 
 const { Content } = Layout;
 
@@ -14,10 +14,15 @@ class PatientsPage extends React.Component {
   }
 
   async componentDidMount() {
+    // start load api, show loading
+    const msgKey = "loading";
+    const hideLoading = message.loading("Fetching patient data..", 0);
     await request();
     this.setState({
       awaitingData: false
     });
+    hideLoading();
+    message.success({ content: "Patient data loaded!", key: msgKey, duration: 2 });
   }
 
   render() {
