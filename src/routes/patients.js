@@ -15,7 +15,9 @@ class PatientsPage extends React.Component {
 
   async componentDidMount() {
     await request();
-    this.state.awaitingData = false;
+    this.setState({
+      awaitingData: false
+    });
   }
 
   render() {
