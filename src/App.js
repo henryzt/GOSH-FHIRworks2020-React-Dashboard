@@ -24,9 +24,7 @@ class App extends React.Component {
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }}>
-            {/* {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: "trigger"
-            })} */}
+            <h2 style={{ paddingLeft: 20 + "px" }}>Home</h2>
           </Header>
 
           <PatientPage></PatientPage>

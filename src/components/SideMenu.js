@@ -1,23 +1,27 @@
 import React, { Component } from "react";
 import { Menu } from "antd";
 
-import { UserOutlined, VideoCameraOutlined, UploadOutlined } from "@ant-design/icons";
+import { HomeOutlined, TeamOutlined, SearchOutlined, BarChartOutlined } from "@ant-design/icons";
 
 class SideMenu extends React.Component {
   render() {
     return (
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
-          <UserOutlined />
-          <span>nav 1</span>
+          <HomeOutlined />
+          <span>Home</span>
         </Menu.Item>
         <Menu.Item key="2">
-          <VideoCameraOutlined />
-          <span>nav 2</span>
+          <TeamOutlined />
+          <span>Patient List</span>
         </Menu.Item>
         <Menu.Item key="3">
-          <UploadOutlined />
-          <span>nav 3</span>
+          <SearchOutlined />
+          <span>Search</span>
+        </Menu.Item>
+        <Menu.Item key="4">
+          <BarChartOutlined />
+          <span>Statistics</span>
         </Menu.Item>
       </Menu>
     );
