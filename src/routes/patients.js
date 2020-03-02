@@ -1,10 +1,23 @@
 import React, { Component } from "react";
 import PatientCard from "../components/PatientCard";
+import request from "../javascript/api";
 import { Layout } from "antd";
 
 const { Content } = Layout;
 
 class PatientsPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      awaitingData: true
+    };
+  }
+
+  async componentDidMount() {
+    await request();
+    this.state.awaitingData = false;
+  }
+
   render() {
     const patient = {
       name: "Charlie",
@@ -20,7 +33,7 @@ class PatientsPage extends React.Component {
           minHeight: 280
         }}
       >
-        <PatientCard patientData={patient}></PatientCard>
+        <PatientCard patientData={patient} loading={this.state.awaitingData}></PatientCard>
       </Content>
     );
   }

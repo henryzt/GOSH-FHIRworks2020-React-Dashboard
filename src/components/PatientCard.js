@@ -10,10 +10,15 @@ class PatientCard extends Component {
   }
 
   render() {
-    const { patientData } = this.props;
+    const { patientData, loading } = this.props;
 
     return (
-      <Card title={patientData.name} extra={<a href="#">View Detail</a>} style={{ width: 300 }}>
+      <Card
+        title={patientData.name}
+        extra={<a href="#">View Detail</a>}
+        style={{ width: 300 }}
+        loading={loading}
+      >
         <p>Card content</p>
         <p>Card content</p>
         <p>Card content</p>
