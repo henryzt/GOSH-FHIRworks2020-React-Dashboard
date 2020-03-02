@@ -4,9 +4,14 @@ import "antd/dist/antd.css";
 import PatientCard from "./PatientCard";
 
 function App() {
+  const patient = {
+    name: "Charlie",
+    job: "Janitor"
+  };
+
   return (
     <div className="App">
-      <PatientCard></PatientCard>
+      <PatientCard patientData={patient}></PatientCard>
     </div>
   );
 }
