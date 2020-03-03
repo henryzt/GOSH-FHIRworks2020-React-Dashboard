@@ -10,7 +10,7 @@ class PatientsPage extends React.Component {
     super(props);
     this.state = {
       awaitingData: true,
-      patients: [{ entry: [null, null, null, null, null, null, null, null, null, null] }],
+      patients: [{ entry: [null, null, null, null, null, null, null, null, null] }],
       page: 0
     };
   }
