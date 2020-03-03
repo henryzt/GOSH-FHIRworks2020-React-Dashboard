@@ -43,34 +43,38 @@ const SearchForm = props => {
           </Form.Item>
         </Col>
 
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={4}>
-          <Form.Item name={`phone`} label={`Phone number`}>
-            <Input placeholder="Enter phone number to filter" />
-          </Form.Item>
-        </Col>
+        {expand && (
+          <React.Fragment>
+            <Col sm={24} md={12} lg={8} className="search_inputs" key={4}>
+              <Form.Item name={`phone`} label={`Phone number`}>
+                <Input placeholder="Enter phone number to filter" />
+              </Form.Item>
+            </Col>
 
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={5}>
-          <Form.Item name={`address`} label={`Country and Address`}>
-            <Input placeholder="Enter counrty code to filter" />
-          </Form.Item>
-        </Col>
+            <Col sm={24} md={12} lg={8} className="search_inputs" key={5}>
+              <Form.Item name={`address`} label={`Country and Address`}>
+                <Input placeholder="Enter counrty code to filter" />
+              </Form.Item>
+            </Col>
 
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={6}>
-          <Form.Item name={`maritalStatus`} label={`Marital Status`}>
-            <Input placeholder="Enter marital status to filter" />
-          </Form.Item>
-        </Col>
+            <Col sm={24} md={12} lg={8} className="search_inputs" key={6}>
+              <Form.Item name={`maritalStatus`} label={`Marital Status`}>
+                <Input placeholder="Enter marital status to filter" />
+              </Form.Item>
+            </Col>
 
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={7}>
-          <Form.Item name={`id`} label={`Patient ID`}>
-            <Input placeholder="Enter Patient ID to filter" />
-          </Form.Item>
-        </Col>
-        <Col sm={24} md={23} lg={16} span={16} key={8}>
-          <Form.Item name={"anythingElse"} label="Search for anything else">
-            <Input.TextArea placeholder="Just type anything you would like to search, you can search for Social Security Number, Driver's License, Passport Number, Ethics etc. Regular expression is supported." />
-          </Form.Item>
-        </Col>
+            <Col sm={24} md={12} lg={8} className="search_inputs" key={7}>
+              <Form.Item name={`id`} label={`Patient ID`}>
+                <Input placeholder="Enter Patient ID to filter" />
+              </Form.Item>
+            </Col>
+            <Col sm={24} md={23} lg={16} span={16} key={8}>
+              <Form.Item name={"anythingElse"} label="Search for anything else">
+                <Input.TextArea placeholder="Just type anything you would like to search, you can search for Social Security Number, Driver's License, Passport Number, Ethics etc. Regular expression is supported." />
+              </Form.Item>
+            </Col>
+          </React.Fragment>
+        )}
       </Row>
 
       <Row>
@@ -80,6 +84,17 @@ const SearchForm = props => {
             textAlign: "right"
           }}
         >
+          <a
+            style={{
+              marginRight: 12,
+              fontSize: 12
+            }}
+            onClick={() => {
+              setExpand(!expand);
+            }}
+          >
+            {expand ? <UpOutlined /> : <DownOutlined />} Search More
+          </a>
           <Button type="primary" htmlType="submit">
             Search
           </Button>
@@ -93,17 +108,6 @@ const SearchForm = props => {
           >
             Clear
           </Button>
-          <a
-            style={{
-              marginLeft: 8,
-              fontSize: 12
-            }}
-            onClick={() => {
-              setExpand(!expand);
-            }}
-          >
-            {expand ? <UpOutlined /> : <DownOutlined />} Collapse
-          </a>
         </Col>
       </Row>
     </Form>
