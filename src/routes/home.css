@@ -1,17 +1,14 @@
 .center {
-  width: 80%;
-  max-width: 900px;
-  margin: 100px auto;
+  width: 100%;
   background: rgb(71, 227, 255);
-  height: 300px;
+  height: 400px;
   text-align: center;
-  padding: 100px;
-  font-size: xx-large;
+  padding: 150px;
+  font-size: 3em;
   color: white;
-  background-image: linear-gradient(to right, rgba(0, 31, 97, 0.808), rgba(66, 238, 244, 0.459)),
+  background-image: linear-gradient(to right, rgba(0, 31, 97, 0.8), rgba(66, 238, 244, 0.5)),
     url("../img/homebg.jpg");
   background-size: cover;
-  background-position: center;
   border-radius: 0;
 }
 
@@ -19,7 +16,7 @@
   width: 70%;
   max-width: 800px;
   margin: 150px auto;
-  margin-top: -200px;
+  margin-top: -100px;
   display: flex;
 }
 
