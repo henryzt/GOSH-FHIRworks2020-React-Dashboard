@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import { Form, Row, Col, Input, Button } from "antd";
+import { Form, Row, Col, Input, Button, DatePicker } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
+const { RangePicker } = DatePicker;
 
-const SearchForm = () => {
+const SearchForm = props => {
   const [expand, setExpand] = useState(false);
   const [form] = Form.useForm();
 
   const onFinish = values => {
-    console.log("Received values of form: ", values);
+    props.searchRequest(values);
   };
 
   return (
@@ -21,17 +22,13 @@ const SearchForm = () => {
     >
       <Row gutter={24}>
         <Col span={8} key={1}>
-          <Form.Item
-            name={`Name`}
-            label={`Name`}
-            rules={[
-              {
-                required: true,
-                message: "Required"
-              }
-            ]}
-          >
+          <Form.Item name={`name`} label={`Name`}>
             <Input placeholder="placeholder" />
+          </Form.Item>
+        </Col>
+        <Col span={8} key={2}>
+          <Form.Item name="range-picker" label="Birthdate">
+            <RangePicker />
           </Form.Item>
         </Col>
       </Row>

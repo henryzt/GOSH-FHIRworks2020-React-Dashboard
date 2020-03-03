@@ -35,3 +35,11 @@
   border: 1px dashed #434343;
   background: rgba(255, 255, 255, 0.04);
 }
+
+.ant-form-item-label {
+  width: 100%;
+}
+
+.ant-form-item-label > label {
+  width: 100%;
+}

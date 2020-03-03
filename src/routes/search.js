@@ -10,12 +10,24 @@ class SearchPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      awaitingData: true
+      searchContent: null
     };
   }
 
+  searchPatient = query => {
+    console.log("received search request: ", query);
+    this.setState({
+      searchContent: query
+    });
+  };
+
   render() {
-    return <SearchForm></SearchForm>;
+    return (
+      <div>
+        <SearchForm searchRequest={this.searchPatient}></SearchForm>
+        {this.state.searchContent && <PatientPage />}
+      </div>
+    );
   }
 }
 
