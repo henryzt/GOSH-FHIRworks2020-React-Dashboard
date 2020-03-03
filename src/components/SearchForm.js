@@ -23,17 +23,17 @@ const SearchForm = props => {
       onFinish={onFinish}
     >
       <Row gutter={24}>
-        <Col span={8} key={1}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={1}>
           <Form.Item name={`name`} label={`Patient Name`}>
             <Input placeholder="Enter Patient's name to filter" />
           </Form.Item>
         </Col>
-        <Col span={8} key={2}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={2}>
           <Form.Item name="birth-date" label="Birthdate Range">
             <RangePicker />
           </Form.Item>
         </Col>
-        <Col span={8} key={3}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={3}>
           <Form.Item name="gender" label="Gender">
             <Select placeholder="Select a gender to filter" allowClear>
               <Option value="male">male</Option>
@@ -45,19 +45,19 @@ const SearchForm = props => {
       </Row>
 
       <Row gutter={24}>
-        <Col span={8} key={1}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={1}>
           <Form.Item name={`phone`} label={`Phone number`}>
             <Input placeholder="Enter phone number to filter" />
           </Form.Item>
         </Col>
 
-        <Col span={8} key={2}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={2}>
           <Form.Item name={`address`} label={`Country and Address`}>
             <Input placeholder="Enter counrty code to filter" />
           </Form.Item>
         </Col>
 
-        <Col span={8} key={2}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={2}>
           <Form.Item name={`maritalStatus`} label={`Marital Status`}>
             <Input placeholder="Enter marital status to filter" />
           </Form.Item>
@@ -65,14 +65,14 @@ const SearchForm = props => {
       </Row>
 
       <Row gutter={24}>
-        <Col span={8} key={1}>
+        <Col xs={23} sm={23} md={12} lg={8} className="search_inputs" key={1}>
           <Form.Item name={`id`} label={`Patient ID`}>
             <Input placeholder="Enter Patient ID to filter" />
           </Form.Item>
         </Col>
         <Col span={16}>
           <Form.Item name={["user", "anything"]} label="Search for anything else">
-            <Input.TextArea placeholder="Just type anything you would like to search, you can search for Social Security Number, Driver's License, Passport Number, Ethics etc." />
+            <Input.TextArea placeholder="Just type anything you would like to search, you can search for Social Security Number, Driver's License, Passport Number, Ethics etc. Regular expression is supported." />
           </Form.Item>
         </Col>
       </Row>
