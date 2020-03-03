@@ -8,16 +8,19 @@ class PatientsListDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      patientsDummy: [{ entry: [null, null, null, null, null, null, null, null, null] }],
-      page: props.page ? props.page : 0
+      patientsDummy: [null, null, null, null, null, null, null, null, null],
+      page: props.page ? props.page : 0,
+      itemPerPage: 9
     };
   }
 
   render() {
     let patients = this.props.patients ? this.props.patients : this.state.patientsDummy;
 
+    let startIdx = this.state.page * this.state.itemPerPage;
+
     let keyCounter = 0;
-    let listItems = patients[this.state.page].entry.map(patient => (
+    let listItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
       <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
         <PatientCard
           patientData={patient && patient.resource}
@@ -31,6 +34,7 @@ class PatientsListDisplay extends React.Component {
         style={{ textAlign: "center" }}
         disabled={this.props.loading}
         defaultCurrent={1}
+        defaultPageSize={this.state.itemPerPage}
         current={this.state.page + 1}
         total={patients && patients.length > 1 ? patients.length : 50}
         onChange={page => {

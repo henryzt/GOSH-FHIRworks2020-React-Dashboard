@@ -14,17 +14,22 @@ class PatientsPage extends React.Component {
   }
 
   async componentDidMount() {
-    // start load api, show loading
-    const msgKey = "loading";
-    const hideLoading = message.loading("Fetching patient data..", 0);
-    let json = await request();
+    let json = null;
+    if (window.$globalPatients) {
+      json = window.$globalPatients;
+    } else {
+      // start load api, show loading
+      const msgKey = "loading";
+      const hideLoading = message.loading("Fetching patient data..", 0);
+      json = await request();
+      window.$globalPatients = json;
+      hideLoading();
+      message.success({ content: "Patient data loaded!", key: msgKey, duration: 2 });
+    }
     this.setState({
       awaitingData: false,
       patients: json
     });
-    window.$globalPatients = json;
-    hideLoading();
-    message.success({ content: "Patient data loaded!", key: msgKey, duration: 2 });
   }
 
   render() {
