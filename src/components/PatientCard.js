@@ -14,10 +14,11 @@ class PatientCard extends Component {
 
     return (
       <Card
-        title={patientData.name}
+        title={patientData ? patientData.name[0].family : "Loading..."}
         extra={<a href="#">View Detail</a>}
         style={{ width: 300 }}
         loading={loading}
+        hoverable
       >
         <p>Card content</p>
         <p>Card content</p>
