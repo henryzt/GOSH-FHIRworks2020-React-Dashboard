@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PatientCard from "../components/PatientCard";
 import request from "../javascript/api";
-import { Layout, message, Pagination } from "antd";
+import { Layout, message, Pagination, Row, Col } from "antd";
 
 const { Content } = Layout;
 
@@ -30,10 +30,12 @@ class PatientsPage extends React.Component {
 
   render() {
     let listItems = this.state.patients[this.state.page].entry.map(patient => (
-      <PatientCard
-        patientData={patient && patient.resource}
-        loading={this.state.awaitingData}
-      ></PatientCard>
+      <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }}>
+        <PatientCard
+          patientData={patient && patient.resource}
+          loading={this.state.awaitingData}
+        ></PatientCard>
+      </Col>
     ));
 
     let pagination = (
@@ -61,7 +63,7 @@ class PatientsPage extends React.Component {
             minHeight: 280
           }}
         >
-          <div style={{ display: "flex", flexWrap: "wrap" }}>{listItems}</div>
+          <Row>{listItems}</Row>
         </Content>
         {pagination}
       </div>
