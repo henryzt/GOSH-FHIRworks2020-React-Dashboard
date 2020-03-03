@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PatientPage from "./patients";
 import SearchForm from "../components/SearchForm";
 import request from "../javascript/api";
-import { Layout, message, Pagination, Row, Col } from "antd";
+import { Layout, message, Pagination, Row, Col, Modal } from "antd";
 import "./search.css";
 const { Content } = Layout;
 
@@ -16,6 +16,14 @@ class SearchPage extends React.Component {
 
   searchPatient = query => {
     console.log("received search request: ", query);
+    const isEmpty = Object.values(query).every(x => x === undefined || x === null || x === "");
+    if (isEmpty) {
+      Modal.warning({
+        title: "Search Failed",
+        content: "At least one field is required to filter results"
+      });
+      return;
+    }
     this.setState({
       searchContent: query
     });
@@ -25,7 +33,7 @@ class SearchPage extends React.Component {
     return (
       <div>
         <SearchForm searchRequest={this.searchPatient}></SearchForm>
-        {this.state.searchContent && <PatientPage />}
+        {this.state.searchContent && <PatientPage filter={this.state.searchContent} />}
       </div>
     );
   }
