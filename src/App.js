@@ -18,12 +18,20 @@ class App extends React.Component {
   render() {
     return (
       <Layout style={{ minHeight: 100 + "vh" }}>
-        <Sider collapsible breakpoint="lg">
+        <Sider
+          collapsible
+          breakpoint="lg"
+          width="230"
+          style={{ boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)" }}
+        >
           <div className="logo" />
           <SideMenu></SideMenu>
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }}>
+          <Header
+            className="site-layout-background"
+            style={{ padding: 0, boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)", zIndex: 20 }}
+          >
             <h2 style={{ paddingLeft: 20 + "px" }}>Home</h2>
           </Header>
 
