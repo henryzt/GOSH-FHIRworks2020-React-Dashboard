@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import { Form, Row, Col, Input, Button, DatePicker, Select } from "antd";
+import { Form, Row, Col, Input, Button, DatePicker, Select, Checkbox } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 const { RangePicker } = DatePicker;
@@ -25,7 +25,7 @@ const SearchForm = props => {
       <Row gutter={24}>
         <Col sm={24} md={12} lg={8} className="search_inputs" key={1}>
           <Form.Item name={`name`} label={`Patient Name`}>
-            <Input placeholder="Enter Patient's name to filter" />
+            <Input placeholder="Enter Patient's first or last name to filter" />
           </Form.Item>
         </Col>
         <Col sm={24} md={12} lg={8} className="search_inputs" key={2}>
@@ -78,8 +78,13 @@ const SearchForm = props => {
       </Row>
 
       <Row>
+        <Col span={12}>
+          <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
+            <Checkbox>Blurred Match</Checkbox>
+          </Form.Item>
+        </Col>
         <Col
-          span={24}
+          span={12}
           style={{
             textAlign: "right"
           }}

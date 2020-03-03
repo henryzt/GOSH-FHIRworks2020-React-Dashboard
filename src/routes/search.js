@@ -16,7 +16,10 @@ class SearchPage extends React.Component {
 
   searchPatient = query => {
     console.log("received search request: ", query);
-    const isEmpty = Object.values(query).every(x => x === undefined || x === null || x === "");
+    //check if all the field is empty except blurred search checkbox
+    let queryClone = Object.assign({}, query);
+    delete queryClone.blurredSearch;
+    const isEmpty = Object.values(queryClone).every(x => x === undefined || x === null || x === "");
     if (isEmpty) {
       Modal.warning({
         title: "Search Failed",

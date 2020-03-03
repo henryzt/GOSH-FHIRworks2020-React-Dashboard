@@ -45,11 +45,12 @@ class PatientsPage extends React.Component {
   }
 }
 
-function recursiveFind(obj, value) {
+function recursiveFind(obj, value, blurred) {
   let json = JSON.stringify(obj);
-  const regex = new RegExp('"' + value + '"', "g");
-  console.log(json);
-  return json.search(regex) !== -1;
+  const regex = blurred
+    ? new RegExp(value.toLowerCase(), "g")
+    : new RegExp('"' + value.toLowerCase() + '"', "g");
+  return json.toLowerCase().search(regex) !== -1;
 }
 
 function doFilter(patients, filter) {
@@ -58,7 +59,23 @@ function doFilter(patients, filter) {
     let data = patient.resource;
     let match = false;
     if (filter.name) {
-      match = recursiveFind(data.name, filter.name);
+      match = recursiveFind(data.name, filter.name, filter.blurredSearch);
+    }
+
+    if (filter.gender) {
+      match = data.gender == filter.gender;
+    }
+    if (filter.phone) {
+      match = recursiveFind(data.telecom, filter.phone, filter.blurredSearch);
+    }
+    if (filter.address) {
+      match = recursiveFind(data.address, filter.address, filter.blurredSearch);
+    }
+    if (filter.maritalStatus) {
+      match = recursiveFind(data.maritalStatus, filter.maritalStatus, filter.blurredSearch);
+    }
+    if (filter.id) {
+      match = recursiveFind(data.id, filter.id, filter.blurredSearch);
     }
 
     // result
