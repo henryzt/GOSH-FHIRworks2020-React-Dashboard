@@ -57,7 +57,6 @@ class PatientsPage extends React.Component {
     return (
       <div>
         <Content
-          // className="site-layout-background"
           style={{
             margin: "24px 16px",
             padding: 24,

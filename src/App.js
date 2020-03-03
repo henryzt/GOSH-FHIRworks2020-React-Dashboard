@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import "antd/dist/antd.css";
 import PatientPage from "./routes/patients";
+import SearchPage from "./routes/search";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { Layout } from "antd";
-
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const { Header, Sider, Footer, Content } = Layout;
 
@@ -28,6 +27,11 @@ const routes = [
     path: "/patients",
     title: () => "Patients List",
     main: () => <PatientPage />
+  },
+  {
+    path: "/search",
+    title: () => "Advanced Search",
+    main: () => <SearchPage />
   }
 ];
 
