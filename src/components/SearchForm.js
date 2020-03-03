@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import { Form, Row, Col, Input, Button, DatePicker, Select, Checkbox } from "antd";
+import { Form, Row, Col, Input, Button, DatePicker, Select, Checkbox, Tooltip } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 const { RangePicker } = DatePicker;
@@ -78,13 +78,15 @@ const SearchForm = props => {
       </Row>
 
       <Row>
-        <Col span={12}>
+        <Col span={8}>
           <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
-            <Checkbox>Blurred Match</Checkbox>
+            <Tooltip placement="right" title="Weakly match any content close to the search query">
+              <Checkbox>Blurred Match</Checkbox>
+            </Tooltip>
           </Form.Item>
         </Col>
         <Col
-          span={12}
+          span={16}
           style={{
             textAlign: "right"
           }}

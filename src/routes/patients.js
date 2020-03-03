@@ -57,29 +57,29 @@ function doFilter(patients, filter) {
   let result = [];
   for (let patient of patients) {
     let data = patient.resource;
-    let match = false;
+    let match = [];
     if (filter.name) {
-      match = recursiveFind(data.name, filter.name, filter.blurredSearch);
+      match.push(recursiveFind(data.name, filter.name, filter.blurredSearch));
     }
 
     if (filter.gender) {
-      match = data.gender == filter.gender;
+      match.push(data.gender == filter.gender);
     }
     if (filter.phone) {
-      match = recursiveFind(data.telecom, filter.phone, filter.blurredSearch);
+      match.push(recursiveFind(data.telecom, filter.phone, filter.blurredSearch));
     }
     if (filter.address) {
-      match = recursiveFind(data.address, filter.address, filter.blurredSearch);
+      match.push(recursiveFind(data.address, filter.address, filter.blurredSearch));
     }
     if (filter.maritalStatus) {
-      match = recursiveFind(data.maritalStatus, filter.maritalStatus, filter.blurredSearch);
+      match.push(recursiveFind(data.maritalStatus, filter.maritalStatus, filter.blurredSearch));
     }
     if (filter.id) {
-      match = recursiveFind(data.id, filter.id, filter.blurredSearch);
+      match.push(recursiveFind(data.id, filter.id, filter.blurredSearch));
     }
 
     // result
-    if (match) {
+    if (match.every(x => x === true)) {
       result.push(patient);
     }
   }
