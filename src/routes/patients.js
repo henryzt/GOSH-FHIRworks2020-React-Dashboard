@@ -10,8 +10,8 @@ class PatientsPage extends React.Component {
     super(props);
     this.state = {
       awaitingData: true,
-      patients: null,
-      page: 1
+      patients: [{ entry: [null, null, null, null, null, null, null, null, null, null] }],
+      page: 0
     };
   }
 
@@ -29,10 +29,12 @@ class PatientsPage extends React.Component {
   }
 
   render() {
-    const patient = {
-      name: "Charlie",
-      job: "Janitor"
-    };
+    let listItems = this.state.patients[this.state.page].entry.map(patient => (
+      <PatientCard
+        patientData={patient && patient.resource}
+        loading={this.state.awaitingData}
+      ></PatientCard>
+    ));
 
     return (
       <div>
@@ -44,12 +46,20 @@ class PatientsPage extends React.Component {
             minHeight: 280
           }}
         >
-          <PatientCard
-            patientData={this.state.patients && this.state.patients[0].entry[0].resource}
-            loading={this.state.awaitingData}
-          ></PatientCard>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>{listItems}</div>
         </Content>
-        <Pagination style={{ textAlign: "center" }} disabled defaultCurrent={1} total={50} />
+        <Pagination
+          style={{ textAlign: "center" }}
+          disabled={this.state.awaitingData}
+          defaultCurrent={1}
+          current={this.state.page + 1}
+          total={this.state.patients.length > 1 ? this.state.patients.length : 50}
+          onChange={page => {
+            this.setState({
+              page: page - 1
+            });
+          }}
+        />
       </div>
     );
   }

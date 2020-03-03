@@ -18,7 +18,7 @@ class PatientCard extends Component {
       <Card
         title={patientData ? name : "Loading..."}
         extra={<a href="#">View Detail</a>}
-        style={{ width: 300 }}
+        style={{ width: 300, margin: "10px", flexGrow: 1 }}
         loading={loading}
         hoverable
       >
