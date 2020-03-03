@@ -45,7 +45,7 @@ class PatientsPage extends React.Component {
           }}
         >
           <PatientCard
-            patientData={this.state.patients ? this.state.patients[0].entry[0].resource : null}
+            patientData={this.state.patients && this.state.patients[0].entry[0].resource}
             loading={this.state.awaitingData}
           ></PatientCard>
         </Content>

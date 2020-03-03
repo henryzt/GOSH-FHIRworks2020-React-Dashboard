@@ -12,17 +12,25 @@ class PatientCard extends Component {
   render() {
     const { patientData, loading } = this.props;
 
+    const name = patientData && patientData.name[0].family + " " + patientData.name[0].given[0];
+
     return (
       <Card
-        title={patientData ? patientData.name[0].family : "Loading..."}
+        title={patientData ? name : "Loading..."}
         extra={<a href="#">View Detail</a>}
         style={{ width: 300 }}
         loading={loading}
         hoverable
       >
-        <p>Card content</p>
-        <p>Card content</p>
-        <p>Card content</p>
+        {patientData && (
+          <div>
+            <p>{patientData.maritalStatus.text + ", " + patientData.gender}</p>
+            <p>{patientData.birthDate + ", " + patientData.communication[0].language.text}</p>
+            <p>{patientData.telecom.value}</p>
+            <p>{patientData.id}</p>
+            <p>{patientData.address[0].line[0] + ", " + patientData.address[0].country}</p>
+          </div>
+        )}
       </Card>
     );
   }
