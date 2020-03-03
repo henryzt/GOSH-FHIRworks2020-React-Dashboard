@@ -1,0 +1,30 @@
+.center {
+  width: 80%;
+  max-width: 900px;
+  margin: 100px auto;
+  background: rgb(71, 227, 255);
+  height: 300px;
+  text-align: center;
+  padding: 100px;
+  font-size: xx-large;
+  color: white;
+}
+
+.center_float {
+  width: 70%;
+  max-width: 800px;
+  margin: 150px auto;
+  margin-top: -200px;
+  display: flex;
+}
+
+.menu_card {
+  background: white;
+  box-shadow: 0px 6px 22px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 28%;
+  height: 200px;
+  margin: 0 2%;
+  flex-grow: 1;
+  padding: 30px;
+}
