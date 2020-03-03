@@ -36,6 +36,21 @@ class PatientsPage extends React.Component {
       ></PatientCard>
     ));
 
+    let pagination = (
+      <Pagination
+        style={{ textAlign: "center" }}
+        disabled={this.state.awaitingData}
+        defaultCurrent={1}
+        current={this.state.page + 1}
+        total={this.state.patients.length > 1 ? this.state.patients.length : 50}
+        onChange={page => {
+          this.setState({
+            page: page - 1
+          });
+        }}
+      />
+    );
+
     return (
       <div>
         <Content
@@ -48,18 +63,7 @@ class PatientsPage extends React.Component {
         >
           <div style={{ display: "flex", flexWrap: "wrap" }}>{listItems}</div>
         </Content>
-        <Pagination
-          style={{ textAlign: "center" }}
-          disabled={this.state.awaitingData}
-          defaultCurrent={1}
-          current={this.state.page + 1}
-          total={this.state.patients.length > 1 ? this.state.patients.length : 50}
-          onChange={page => {
-            this.setState({
-              page: page - 1
-            });
-          }}
-        />
+        {pagination}
       </div>
     );
   }

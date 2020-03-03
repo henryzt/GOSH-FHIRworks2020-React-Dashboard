@@ -24,7 +24,9 @@ class App extends React.Component {
           width="230"
           style={{ boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)" }}
         >
-          <div className="logo" />
+          <div className="logo">
+            <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
+          </div>
           <SideMenu></SideMenu>
         </Sider>
         <Layout className="site-layout">
