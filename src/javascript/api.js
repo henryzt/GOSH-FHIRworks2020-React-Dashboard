@@ -1,4 +1,7 @@
 function request() {
+  if (window.$globalPatients) {
+    return window.$globalPatients;
+  }
   return new Promise((resolve, reject) => {
     fetch("http://178.62.0.181:5000/api/Patient/")
       .then(async res => {

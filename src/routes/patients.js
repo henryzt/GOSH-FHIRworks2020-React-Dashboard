@@ -24,6 +24,7 @@ class PatientsPage extends React.Component {
       awaitingData: false,
       patients: json
     });
+    window.$globalPatients = json;
     hideLoading();
     message.success({ content: "Patient data loaded!", key: msgKey, duration: 2 });
   }
