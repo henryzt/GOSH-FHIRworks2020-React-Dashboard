@@ -17,6 +17,20 @@ const DesktopMenu = () => {
   return <div>Example</div>;
 };
 
+const routes = [
+  {
+    path: "/",
+    exact: true,
+    title: () => "Home",
+    main: () => <HomePage />
+  },
+  {
+    path: "/patients",
+    title: () => "Patients List",
+    main: () => <PatientPage />
+  }
+];
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -43,15 +57,28 @@ class App extends React.Component {
               className="site-layout-background"
               style={{ padding: 0, boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)", zIndex: 20 }}
             >
-              <h2 style={{ paddingLeft: 20 + "px" }}>Home</h2>
+              <h2 style={{ paddingLeft: 20 + "px" }}>
+                <Switch>
+                  {routes.map((route, index) => (
+                    <Route
+                      key={index}
+                      path={route.path}
+                      exact={route.exact}
+                      children={<route.title />}
+                    />
+                  ))}
+                </Switch>
+              </h2>
             </Header>
             <Switch>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/patients">
-                <PatientPage />
-              </Route>
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  children={<route.main />}
+                />
+              ))}
             </Switch>
 
             <Footer style={{ textAlign: "center" }}>
