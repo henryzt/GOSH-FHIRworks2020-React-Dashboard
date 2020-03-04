@@ -103,7 +103,18 @@ const RouterContent = () => {
       <CSSTransition key={location.key} classNames="fade" timeout={300}>
         <Switch location={location}>
           {routes.map((route, index) => (
-            <Route key={index} path={route.path} exact={route.exact} children={<route.main />} />
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              children={
+                <div style={{ position: "relative" }}>
+                  <div style={{ position: "absolute", top: 0, right: 0, left: 0 }}>
+                    <route.main />
+                  </div>
+                </div>
+              }
+            />
           ))}
         </Switch>
       </CSSTransition>
