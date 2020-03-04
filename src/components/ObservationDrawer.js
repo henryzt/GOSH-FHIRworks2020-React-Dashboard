@@ -36,11 +36,30 @@ class ObservationDrawer extends React.Component {
   render() {
     const { visible } = this.props;
     const patient = this.props.patient && this.props.patient.resource;
-    console.log(patient);
-
-    const observations = this.state.observation && this.state.observation.map(entry => ({}));
-
     let key = 0;
+
+    const observations =
+      this.state.observation &&
+      this.state.observation.map(entry => {
+        let obs = entry.resource;
+        return (
+          <Descriptions key={key++} title={obs.code.text}>
+            <Descriptions.Item key={key++} label="ID">
+              {obs.id}
+            </Descriptions.Item>
+            <Descriptions.Item key={key++} label="Category">
+              {obs.category[0].coding[0].display}
+            </Descriptions.Item>
+            <Descriptions.Item key={key++} label="effectiveDateTime">
+              {obs.effectiveDateTime}
+            </Descriptions.Item>
+            <Descriptions.Item key={key++} label="issued">
+              {obs.issued}
+            </Descriptions.Item>
+          </Descriptions>
+        );
+      });
+
     return (
       <Drawer
         title="Patient Observation"
@@ -69,6 +88,7 @@ class ObservationDrawer extends React.Component {
                 {`${patient.address[0].line[0]}, ${patient.address[0].city}, ${patient.address[0].state}, ${patient.address[0].country}`}
               </Descriptions.Item>
             </Descriptions>
+            {observations}
           </div>
         )}
       </Drawer>
