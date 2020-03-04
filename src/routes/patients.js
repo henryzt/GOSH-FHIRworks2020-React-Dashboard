@@ -21,12 +21,11 @@ class PatientsPage extends React.Component {
       json = window.$globalPatients;
     } else {
       // start load api, show loading
-      const msgKey = "loading";
       const hideLoading = message.loading("Fetching patient data..", 0);
       json = await request();
       window.$globalPatients = json;
       hideLoading();
-      message.success({ content: "Patient data loaded!", key: msgKey, duration: 2 });
+      message.success({ content: "Patient data loaded!", duration: 2 });
     }
     this.setState({
       awaitingData: false,

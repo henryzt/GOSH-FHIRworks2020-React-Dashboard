@@ -1,6 +1,6 @@
 import React from "react";
 import PatientCard from "./PatientCard";
-import { Layout, Pagination, Row, Col } from "antd";
+import { Layout, Pagination, Row, Col, Result } from "antd";
 
 const { Content } = Layout;
 
@@ -20,7 +20,7 @@ class PatientsListDisplay extends React.Component {
     let startIdx = this.state.page * this.state.itemPerPage;
 
     let keyCounter = 0;
-    let listItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
+    let cardListItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
       <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
         <PatientCard
           patientData={patient && patient.resource}
@@ -45,16 +45,29 @@ class PatientsListDisplay extends React.Component {
       />
     );
 
-    return (
+    const cardLayout = (
       <div>
         <Content
           style={{
             margin: "24px 16px"
           }}
         >
-          <Row>{listItems}</Row>
+          <Row>{cardListItems}</Row>
         </Content>
         {pagination}
+      </div>
+    );
+
+    return (
+      <div>
+        {patients.length > 0 ? (
+          <div>{cardLayout}</div>
+        ) : (
+          <Result
+            title="No search result to display"
+            subTitle="Try a different keyword or turn on blur match"
+          />
+        )}
       </div>
     );
   }

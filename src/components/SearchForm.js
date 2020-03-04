@@ -36,9 +36,8 @@ const SearchForm = props => {
         <Col sm={24} md={12} lg={8} className="search_inputs" key={3}>
           <Form.Item name="gender" label="Gender">
             <Select placeholder="Select a gender to filter" allowClear>
-              <Option value="male">male</Option>
-              <Option value="female">female</Option>
-              <Option value="other">other</Option>
+              <Option value="male">Male</Option>
+              <Option value="female">Female</Option>
             </Select>
           </Form.Item>
         </Col>
