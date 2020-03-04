@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PatientsListDisplay from "../components/PatientsListDisplay";
-import request from "../javascript/api";
+import { request } from "../javascript/api";
 import Header from "../components/Header";
 import { message } from "antd";
 
