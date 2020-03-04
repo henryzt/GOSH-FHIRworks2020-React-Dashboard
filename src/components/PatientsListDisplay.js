@@ -81,16 +81,14 @@ class PatientsListDisplay extends React.Component {
               visible={this.state.showDrawer}
               onClose={() => {
                 this.setState({
+                  currentSelectedPatient: null,
                   showDrawer: false
                 });
               }}
             ></ObservationDrawer>
           </div>
         ) : (
-          <Result
-            title="No search result to display"
-            subTitle="Try a different keyword or turn on blur match"
-          />
+          <Result title="No search result to display" subTitle="You can try a different keyword" />
         )}
       </div>
     );

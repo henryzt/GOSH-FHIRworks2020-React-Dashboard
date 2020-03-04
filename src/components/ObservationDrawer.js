@@ -25,10 +25,11 @@ class ObservationDrawer extends React.Component {
   }
 
   onClose = () => {
-    this.state = {
+    this.setState({
       loading: true,
       observation: null
-    };
+    });
+    console.log(this.state);
     this.props.onClose();
   };
 
@@ -36,6 +37,9 @@ class ObservationDrawer extends React.Component {
     const { visible } = this.props;
     const patient = this.props.patient && this.props.patient.resource;
     console.log(patient);
+
+    const observations = this.state.observation && this.state.observation.map(entry => ({}));
+
     let key = 0;
     return (
       <Drawer
