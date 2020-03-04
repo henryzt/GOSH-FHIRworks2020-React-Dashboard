@@ -17,8 +17,9 @@ class PatientCard extends Component {
     return (
       <Card
         title={patientData ? name : "Loading..."}
+        onClick={this.props.viewPatient}
         extra={
-          <a href="#" disabled={loading} onClick={this.props.viewPatient}>
+          <a disabled={loading} onClick={this.props.viewPatient}>
             View Detail
           </a>
         }

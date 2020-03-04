@@ -35,7 +35,9 @@ class PatientsListDisplay extends React.Component {
         <PatientCard
           patientData={patient && patient.resource}
           loading={this.props.loading}
-          viewPatient={this.viewPatientDrawer}
+          viewPatient={() => {
+            this.viewPatientDrawer(patient);
+          }}
         ></PatientCard>
       </Col>
     ));
@@ -75,7 +77,7 @@ class PatientsListDisplay extends React.Component {
           <div>
             {cardLayout}
             <ObservationDrawer
-              patient={this.props.currentSelectedPatient}
+              patient={this.state.currentSelectedPatient}
               visible={this.state.showDrawer}
               onClose={() => {
                 this.setState({

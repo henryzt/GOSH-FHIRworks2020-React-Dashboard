@@ -4,6 +4,7 @@ import { Drawer } from "antd";
 class ObservationDrawer extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       value: null
     };
@@ -14,8 +15,7 @@ class ObservationDrawer extends React.Component {
   };
 
   render() {
-    const { visible } = this.props;
-
+    const { visible, patient } = this.props;
     return (
       <Drawer
         title="Patient Observation"
@@ -24,7 +24,7 @@ class ObservationDrawer extends React.Component {
         onClose={this.onClose}
         visible={visible}
       >
-        <p>Some contents...</p>
+        <p>{patient && patient.resource.name[0].family}</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Drawer>
