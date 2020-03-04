@@ -1,5 +1,6 @@
 import React from "react";
 import PatientCard from "./PatientCard";
+import ObservationDrawer from "./ObservationDrawer";
 import { Layout, Pagination, Row, Col, Result } from "antd";
 
 const { Content } = Layout;
@@ -10,9 +11,18 @@ class PatientsListDisplay extends React.Component {
     this.state = {
       patientsDummy: [null, null, null, null, null, null, null, null, null],
       page: props.page ? props.page : 0,
-      itemPerPage: 9
+      itemPerPage: 9,
+      showDrawer: false,
+      currentSelectedPatient: null
     };
   }
+
+  viewPatientDrawer = patient => {
+    this.setState({
+      showDrawer: true,
+      currentSelectedPatient: patient
+    });
+  };
 
   render() {
     let patients = this.props.patients ? this.props.patients : this.state.patientsDummy;
@@ -25,6 +35,7 @@ class PatientsListDisplay extends React.Component {
         <PatientCard
           patientData={patient && patient.resource}
           loading={this.props.loading}
+          viewPatient={this.viewPatientDrawer}
         ></PatientCard>
       </Col>
     ));
@@ -61,7 +72,18 @@ class PatientsListDisplay extends React.Component {
     return (
       <div>
         {patients.length > 0 ? (
-          <div>{cardLayout}</div>
+          <div>
+            {cardLayout}
+            <ObservationDrawer
+              patient={this.props.currentSelectedPatient}
+              visible={this.state.showDrawer}
+              onClose={() => {
+                this.setState({
+                  showDrawer: false
+                });
+              }}
+            ></ObservationDrawer>
+          </div>
         ) : (
           <Result
             title="No search result to display"
