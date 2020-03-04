@@ -80,9 +80,11 @@ const SearchForm = props => {
       <Row>
         <Col span={8}>
           <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
-            <Tooltip placement="right" title="Weakly match any content close to the search query">
-              <Checkbox>Blurred Match</Checkbox>
-            </Tooltip>
+            <Checkbox>
+              <Tooltip placement="right" title="Weakly match any content close to the search query">
+                Blurred Match
+              </Tooltip>
+            </Checkbox>
           </Form.Item>
         </Col>
         <Col

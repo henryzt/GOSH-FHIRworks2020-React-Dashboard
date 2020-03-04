@@ -48,7 +48,7 @@ class PatientsPage extends React.Component {
 function recursiveFind(obj, value, blurred) {
   let json = JSON.stringify(obj);
   const regex = blurred
-    ? new RegExp(value.toLowerCase(), "g")
+    ? new RegExp(".*" + value.toLowerCase() + ".*", "g")
     : new RegExp('"' + value.toLowerCase() + '"', "g");
   return json.toLowerCase().search(regex) !== -1;
 }
