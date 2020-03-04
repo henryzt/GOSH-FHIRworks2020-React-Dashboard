@@ -6,6 +6,8 @@ import SearchPage from "./routes/search";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 
+import PageTransition from "react-router-page-transition";
+
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
@@ -84,10 +86,6 @@ class App extends React.Component {
             </Header>
 
             <RouterContent></RouterContent>
-
-            <Footer style={{ textAlign: "center" }}>
-              FHIR Dashboard ©2020 Created by henryz00
-            </Footer>
           </Layout>
         </Layout>
       </Router>
@@ -97,10 +95,9 @@ class App extends React.Component {
 
 const RouterContent = () => {
   let location = useLocation();
-  console.log(location);
   return (
     <TransitionGroup>
-      <CSSTransition key={location.key} classNames="fade" timeout={300}>
+      <CSSTransition key={location.key} classNames="page" timeout={300}>
         <Switch location={location}>
           {routes.map((route, index) => (
             <Route
@@ -108,9 +105,10 @@ const RouterContent = () => {
               path={route.path}
               exact={route.exact}
               children={
-                <div style={{ position: "relative" }}>
-                  <div style={{ position: "absolute", top: 0, right: 0, left: 0 }}>
+                <div className="container">
+                  <div className="page">
                     <route.main />
+                    <FhirFooter></FhirFooter>
                   </div>
                 </div>
               }
@@ -120,6 +118,10 @@ const RouterContent = () => {
       </CSSTransition>
     </TransitionGroup>
   );
+};
+
+const FhirFooter = () => {
+  return <Footer style={{ textAlign: "center" }}>FHIR Dashboard ©2020 Created by henryz00</Footer>;
 };
 
 export default App;
