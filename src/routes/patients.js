@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PatientsListDisplay from "../components/PatientsListDisplay";
 import request from "../javascript/api";
+import Header from "../components/Header";
 import { message } from "antd";
 
 const moment = require("moment");
@@ -40,6 +41,7 @@ class PatientsPage extends React.Component {
         : this.state.patients;
     return (
       <div>
+        {!this.props.filter && <Header title="Patients List"></Header>}
         <PatientsListDisplay patients={patientData} loading={this.state.awaitingData} />
       </div>
     );

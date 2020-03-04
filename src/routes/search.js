@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PatientPage from "./patients";
 import SearchForm from "../components/SearchForm";
+import Header from "../components/Header";
 import request from "../javascript/api";
 import { Layout, message, Pagination, Row, Col, Modal } from "antd";
 import "./search.css";
@@ -35,6 +36,7 @@ class SearchPage extends React.Component {
   render() {
     return (
       <div>
+        <Header title="Advanced Search"></Header>
         <SearchForm searchRequest={this.searchPatient}></SearchForm>
         {this.state.searchContent && <PatientPage filter={this.state.searchContent} />}
       </div>
