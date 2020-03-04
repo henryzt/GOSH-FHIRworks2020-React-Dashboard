@@ -36,7 +36,7 @@ class PatientsListDisplay extends React.Component {
         defaultCurrent={1}
         defaultPageSize={this.state.itemPerPage}
         current={this.state.page + 1}
-        total={patients && patients.length > 1 ? patients.length : 50}
+        total={patients && patients.length > 1 ? patients.length : 0}
         onChange={page => {
           this.setState({
             page: page - 1

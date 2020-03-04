@@ -3,6 +3,8 @@ import PatientsListDisplay from "../components/PatientsListDisplay";
 import request from "../javascript/api";
 import { message } from "antd";
 
+const moment = require("moment");
+
 class PatientsPage extends React.Component {
   constructor(props) {
     super(props);
@@ -61,7 +63,12 @@ function doFilter(patients, filter) {
     if (filter.name) {
       match.push(recursiveFind(data.name, filter.name, filter.blurredSearch));
     }
-
+    if (filter.birthdate) {
+      let isWithIn =
+        filter.birthdate[0] <= moment(data.birthDate) &&
+        moment(data.birthDate) <= filter.birthdate[1];
+      match.push(isWithIn);
+    }
     if (filter.gender) {
       match.push(data.gender == filter.gender);
     }
@@ -76,6 +83,9 @@ function doFilter(patients, filter) {
     }
     if (filter.id) {
       match.push(recursiveFind(data.id, filter.id, filter.blurredSearch));
+    }
+    if (filter.anythingElse) {
+      match.push(recursiveFind(data, filter.anythingElse, filter.blurredSearch));
     }
 
     // result
