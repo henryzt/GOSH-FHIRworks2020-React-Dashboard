@@ -6,7 +6,8 @@ import SearchPage from "./routes/search";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { BrowserRouter as Router, Switch, Route, Link, withRouter } from "react-router-dom";
 
 import { Layout } from "antd";
 
@@ -42,64 +43,65 @@ class App extends React.Component {
 
   render() {
     console.log(this.props);
+    let { location } = this.props;
     return (
-      <Router>
-        <Layout style={{ minHeight: 100 + "vh" }}>
-          <Sider
-            collapsible
-            breakpoint="lg"
-            width="230"
-            style={{
-              boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
-              overflow: "auto",
-              height: "100vh",
-              position: "sticky",
-              top: 0,
-              left: 0
-            }}
+      <Layout style={{ minHeight: 100 + "vh" }}>
+        <Sider
+          collapsible
+          breakpoint="lg"
+          width="230"
+          style={{
+            boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
+            overflow: "auto",
+            height: "100vh",
+            position: "sticky",
+            top: 0,
+            left: 0
+          }}
+        >
+          <div className="logo">
+            <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
+          </div>
+          <SideMenu></SideMenu>
+        </Sider>
+        <Layout className="site-layout">
+          <Header
+            className="site-layout-background"
+            style={{ padding: 0, boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)", zIndex: 20 }}
           >
-            <div className="logo">
-              <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
-            </div>
-            <SideMenu></SideMenu>
-          </Sider>
-          <Layout className="site-layout">
-            <Header
-              className="site-layout-background"
-              style={{ padding: 0, boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)", zIndex: 20 }}
-            >
-              <h2 style={{ paddingLeft: 20 + "px" }}>
-                <Switch>
-                  {routes.map((route, index) => (
-                    <Route
-                      key={index}
-                      path={route.path}
-                      exact={route.exact}
-                      children={<route.title />}
-                    />
-                  ))}
-                </Switch>
-              </h2>
-            </Header>
-            <Switch>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  children={<route.main />}
-                />
-              ))}
-            </Switch>
+            <h2 style={{ paddingLeft: 20 + "px" }}>
+              <Switch location={location}>
+                {routes.map((route, index) => (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    children={<route.title />}
+                  />
+                ))}
+              </Switch>
+            </h2>
+          </Header>
+          <TransitionGroup>
+            <CSSTransition key={location.key} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
+              <Switch location={location}>
+                {routes.map((route, index) => (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    children={<route.main />}
+                  />
+                ))}
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
 
-            <Footer style={{ textAlign: "center" }}>
-              FHIR Dashboard ©2020 Created by henryz00
-            </Footer>
-          </Layout>
+          <Footer style={{ textAlign: "center" }}>FHIR Dashboard ©2020 Created by henryz00</Footer>
         </Layout>
-      </Router>
+      </Layout>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
