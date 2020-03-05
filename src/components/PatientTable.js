@@ -22,11 +22,11 @@ class PatientTable extends Component {
 
   updatePatientArray = patients => {
     const tableData = [];
-    patients.forEach(element => {
-      if (!element) {
+    patients.forEach(elementRaw => {
+      if (!elementRaw) {
         return null;
       }
-      element = element.resource;
+      let element = elementRaw.resource;
       let patient = new Object();
       patient.name = element.name?.[0]?.family + " " + element.name?.[0]?.given?.[0];
       patient.id = element.id;
@@ -38,6 +38,7 @@ class PatientTable extends Component {
       patient.gender = element.gender;
       patient.birthDate = element.birthDate;
       patient.age = moment().diff(element.birthDate, "years");
+      patient.raw = elementRaw;
       tableData.push(patient);
     });
 
@@ -57,7 +58,7 @@ class PatientTable extends Component {
         dataIndex: "name",
         key: "name",
         ellipsis: true,
-        width: 200,
+        width: 195,
         sorter: (a, b) => a.name.localeCompare(b.name),
         fixed: "left"
       },
@@ -134,11 +135,19 @@ class PatientTable extends Component {
       },
       {
         title: "Observations",
-        dataIndex: "observations",
-        key: "observations",
+        dataIndex: "raw",
+        key: "raw",
         width: 120,
-        render: () => <a>View</a>,
-        fixed: "right"
+        render: obj => (
+          <a
+            onClick={() => {
+              this.props.viewPatient(obj);
+            }}
+          >
+            View
+          </a>
+        ),
+        fixed: ""
       }
     ];
 
