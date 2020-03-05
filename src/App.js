@@ -7,6 +7,9 @@ import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 import MobileTabBar from "./components/MobileTabBar";
 
+import logo from "./img/fhir-logo-long.png";
+import icon from "./img/icon.png";
+
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
@@ -15,28 +18,44 @@ import GlobalContextConsumer from "./components/GlobalContext";
 
 const { Header, Sider, Footer, Content } = Layout;
 
-const DesktopMenu = () => {
-  return (
-    <Sider
-      collapsible
-      breakpoint="lg"
-      width="230"
-      style={{
-        boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
-        overflow: "auto",
-        height: "100vh",
-        position: "sticky",
-        top: 0,
-        left: 0
-      }}
-    >
-      <div className="logo">
-        <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
-      </div>
-      <SideMenu></SideMenu>
-    </Sider>
-  );
-};
+class DesktopMenu extends React.Component {
+  state = {
+    collapsed: false
+  };
+
+  updateCollapsed = collapsed => {
+    this.setState({
+      collapsed: collapsed
+    });
+  };
+
+  render() {
+    return (
+      <Sider
+        collapsible
+        onCollapse={this.updateCollapsed}
+        breakpoint="lg"
+        width="230"
+        style={{
+          boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
+          overflow: "auto",
+          height: "100vh",
+          position: "sticky",
+          top: 0,
+          left: 0
+        }}
+      >
+        <div
+          className="logo"
+          style={{
+            background: `url("${this.state.collapsed ? icon : logo}") no-repeat`
+          }}
+        ></div>
+        <SideMenu></SideMenu>
+      </Sider>
+    );
+  }
+}
 
 const routes = [
   {

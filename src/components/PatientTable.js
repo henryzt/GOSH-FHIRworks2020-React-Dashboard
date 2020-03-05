@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table } from "antd";
+import { Table, Skeleton } from "antd";
 
 const moment = require("moment");
 
@@ -49,7 +49,15 @@ class PatientTable extends Component {
     const { loading } = this.props;
 
     if (loading) {
-      return <div></div>;
+      return (
+        <div style={{ padding: "30px" }}>
+          <Skeleton active />
+          <Skeleton active />
+          <Skeleton active />
+          <Skeleton active />
+          <Skeleton active />
+        </div>
+      );
     }
 
     const columns = [
@@ -61,6 +69,22 @@ class PatientTable extends Component {
         width: 195,
         sorter: (a, b) => a.name.localeCompare(b.name),
         fixed: "left"
+      },
+      {
+        title: "Observations",
+        dataIndex: "raw",
+        key: "raw",
+        width: 120,
+        render: obj => (
+          <a
+            onClick={() => {
+              this.props.viewPatient(obj);
+            }}
+          >
+            View Detail
+          </a>
+        ),
+        fixed: ""
       },
       {
         title: "ID",
@@ -132,22 +156,6 @@ class PatientTable extends Component {
         ellipsis: true,
         width: 110,
         sorter: (a, b) => a.country.localeCompare(b.country)
-      },
-      {
-        title: "Observations",
-        dataIndex: "raw",
-        key: "raw",
-        width: 120,
-        render: obj => (
-          <a
-            onClick={() => {
-              this.props.viewPatient(obj);
-            }}
-          >
-            View
-          </a>
-        ),
-        fixed: ""
       }
     ];
 
