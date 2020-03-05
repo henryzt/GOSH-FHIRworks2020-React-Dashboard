@@ -6,8 +6,6 @@ import SearchPage from "./routes/search";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 
-import PageTransition from "react-router-page-transition";
-
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
@@ -43,8 +41,11 @@ class App extends React.Component {
     super(props);
   }
 
+  // static context = GlobalContext;
+
   render() {
     console.log(this.props);
+    // console.log(context);
     return (
       <Router>
         <Layout style={{ minHeight: 100 + "vh" }}>
