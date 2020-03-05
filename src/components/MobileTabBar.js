@@ -16,6 +16,7 @@ class TabBarMenu extends React.Component {
 
   render() {
     const { location } = this.props;
+    console.log(location);
     return (
       <div style={{ position: "fixed", height: "100%", width: "100%", top: 0, zIndex: 100 }}>
         <TabBar unselectedTintColor="#949494" tintColor="#33A3F4" barTintColor="white">
@@ -26,9 +27,8 @@ class TabBarMenu extends React.Component {
             selectedIcon={<HomeOutlined style={iconSelectedStyle} />}
             selected={location.pathname === "/"}
             onPress={() => {
-              window.location = "#/";
+              window.location = "/";
             }}
-            data-seed="logId"
           ></TabBar.Item>
 
           <TabBar.Item
@@ -36,11 +36,10 @@ class TabBarMenu extends React.Component {
             key="Patients"
             icon={<TeamOutlined style={iconNonSelectStyle} />}
             selectedIcon={<TeamOutlined style={iconSelectedStyle} />}
-            selected={location.pathname === "patients"}
+            selected={location.pathname === "/patients"}
             onPress={() => {
-              window.location = "#/patients";
+              window.location = "/patients";
             }}
-            data-seed="logId"
           ></TabBar.Item>
 
           <TabBar.Item
@@ -48,13 +47,12 @@ class TabBarMenu extends React.Component {
             key="Search"
             icon={<SearchOutlined style={iconNonSelectStyle} />}
             selectedIcon={<SearchOutlined style={iconSelectedStyle} />}
-            selected={location.pathname === "search"}
+            selected={location.pathname === "/search"}
             onPress={() => {
               this.setState({
                 selectedTab: "Search"
               });
             }}
-            data-seed="logId"
           ></TabBar.Item>
 
           <TabBar.Item
@@ -62,13 +60,12 @@ class TabBarMenu extends React.Component {
             key="Statistics"
             icon={<BarChartOutlined style={iconNonSelectStyle} />}
             selectedIcon={<BarChartOutlined style={iconSelectedStyle} />}
-            selected={location.pathname === "statistics"}
+            selected={location.pathname === "/statistics"}
             onPress={() => {
               this.setState({
                 selectedTab: "Statistics"
               });
             }}
-            data-seed="logId"
           ></TabBar.Item>
         </TabBar>
       </div>
