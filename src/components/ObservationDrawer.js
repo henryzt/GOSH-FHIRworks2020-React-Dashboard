@@ -120,7 +120,7 @@ class ObservationDrawer extends React.Component {
           <div key={keyGen()} style={{ wordBreak: "break-all" }}>
             <Descriptions
               bordered={true}
-              layout="vertical"
+              layout={this.context.isMobile ? "horizontal" : "vertical"}
               key={keyGen()}
               title={obs.code.text}
               column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}
