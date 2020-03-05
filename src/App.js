@@ -45,12 +45,14 @@ class DesktopMenu extends React.Component {
           left: 0
         }}
       >
-        <div
-          className="logo"
-          style={{
-            background: `url("${this.state.collapsed ? icon : logo}") no-repeat`
-          }}
-        ></div>
+        <Link to="/">
+          <div
+            className="logo"
+            style={{
+              background: `url("${this.state.collapsed ? icon : logo}") no-repeat`
+            }}
+          ></div>
+        </Link>
         <SideMenu></SideMenu>
       </Sider>
     );
