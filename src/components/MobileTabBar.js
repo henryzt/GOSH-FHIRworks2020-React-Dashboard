@@ -17,8 +17,9 @@ class TabBarMenu extends React.Component {
   render() {
     const { location, history } = this.props;
     console.log(location, history);
+
     return (
-      <div style={{ position: "fixed", height: "100%", width: "100%", top: 0, zIndex: 100 }}>
+      <div style={{ position: "absolute", width: "100%", bottom: 0, zIndex: 100 }}>
         <TabBar unselectedTintColor="#949494" tintColor="#33A3F4" barTintColor="white">
           <TabBar.Item
             title="Home"
@@ -49,9 +50,7 @@ class TabBarMenu extends React.Component {
             selectedIcon={<SearchOutlined style={iconSelectedStyle} />}
             selected={location.pathname === "/search"}
             onPress={() => {
-              this.setState({
-                selectedTab: "Search"
-              });
+              history.push("/search");
             }}
           ></TabBar.Item>
 
@@ -62,9 +61,7 @@ class TabBarMenu extends React.Component {
             selectedIcon={<BarChartOutlined style={iconSelectedStyle} />}
             selected={location.pathname === "/statistics"}
             onPress={() => {
-              this.setState({
-                selectedTab: "Statistics"
-              });
+              history.push("/statistics");
             }}
           ></TabBar.Item>
         </TabBar>
