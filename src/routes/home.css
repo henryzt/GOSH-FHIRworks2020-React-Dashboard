@@ -34,9 +34,12 @@ img {
   margin: 10px;
   margin-top: 20px;
 }
+.mobileHeader {
+  height: inherit;
+}
 
 @media (max-width: 575px) {
-  .header {
+  .mobileHeader {
     height: 270px !important;
     line-height: 230px !important;
   }
