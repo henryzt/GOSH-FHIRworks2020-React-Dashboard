@@ -9,6 +9,15 @@ const keyGen = () => {
   return r;
 };
 
+const findValueKey = observation => {
+  let key,
+    keys = [];
+  let filter = new RegExp("value.*", "g");
+  for (key in observation) if (observation.hasOwnProperty(key) && filter.test(key)) keys.push(key);
+  //   console.log(keys);
+  return keys[0];
+};
+
 class ObservationDrawer extends React.Component {
   constructor(props) {
     super(props);
@@ -48,8 +57,21 @@ class ObservationDrawer extends React.Component {
       this.state.observation &&
       this.state.observation.map(entry => {
         let obs = entry.resource;
+        let valueKey = findValueKey(obs);
+        let valueItems;
+        if (valueKey) {
+          valueItems = Object.keys(obs[valueKey]).map(key => {
+            if (key == "coding" || key == "system" || key == "code") return;
+            const value = obs[valueKey][key] + "";
+            return (
+              <Descriptions.Item key={keyGen()} label={key}>
+                {value}
+              </Descriptions.Item>
+            );
+          });
+        }
         return (
-          <div key={keyGen()} style={{ width: "100%" }}>
+          <div key={keyGen()} style={{ wordBreak: "break-all" }}>
             <Descriptions
               bordered={true}
               layout="vertical"
@@ -69,6 +91,7 @@ class ObservationDrawer extends React.Component {
               <Descriptions.Item key={keyGen()} label="issued">
                 {obs.issued}
               </Descriptions.Item>
+              {valueItems}
             </Descriptions>
           </div>
         );
