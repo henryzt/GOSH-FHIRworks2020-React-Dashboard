@@ -1,6 +1,7 @@
 import React from "react";
 import { requestObservation } from "../javascript/api";
 import { Drawer, Descriptions, Skeleton } from "antd";
+import ReactJson from "react-json-view";
 
 const keyGen = () => {
   let r = Math.random()
@@ -176,13 +177,14 @@ class ObservationDrawer extends React.Component {
         )}
 
         <Drawer
-          title="Raw Data"
-          width={"30%"}
+          title="Raw FHIR Data"
+          width={"40%"}
           closable={true}
           onClose={this.onChildrenDrawerClose}
           visible={this.state.rawDataDrawer}
         >
-          {JSON.stringify(this.state.rawDataDrawerData)}
+          <ReactJson src={this.state.rawDataDrawerData} />
+          {/* {JSON.stringify(this.state.rawDataDrawerData)} */}
         </Drawer>
       </Drawer>
     );
