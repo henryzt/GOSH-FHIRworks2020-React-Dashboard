@@ -1,5 +1,6 @@
 import React from "react";
 import PatientCard from "./PatientCard";
+import PatientTable from "./PatientTable";
 import ObservationDrawer from "./ObservationDrawer";
 import { Layout, Pagination, Row, Col, Result } from "antd";
 
@@ -29,19 +30,6 @@ class PatientsListDisplay extends React.Component {
 
     let startIdx = this.state.page * this.state.itemPerPage;
 
-    let keyCounter = 0;
-    let cardListItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
-      <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
-        <PatientCard
-          patientData={patient && patient.resource}
-          loading={this.props.loading}
-          viewPatient={() => {
-            this.viewPatientDrawer(patient);
-          }}
-        ></PatientCard>
-      </Col>
-    ));
-
     let pagination = (
       <Pagination
         style={{ textAlign: "center" }}
@@ -58,11 +46,26 @@ class PatientsListDisplay extends React.Component {
       />
     );
 
+    let keyCounter = 0;
+
+    // -------------------- card view
+    let cardListItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
+      <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
+        <PatientCard
+          patientData={patient && patient.resource}
+          loading={this.props.loading}
+          viewPatient={() => {
+            this.viewPatientDrawer(patient);
+          }}
+        ></PatientCard>
+      </Col>
+    ));
+
     const cardLayout = (
       <div>
         <Content
           style={{
-            margin: "24px 16px"
+            margin: "0px 16px"
           }}
         >
           <Row>{cardListItems}</Row>
@@ -71,11 +74,19 @@ class PatientsListDisplay extends React.Component {
       </div>
     );
 
+    // ---------------------------- Table view
+    const tableLayout = (
+      <PatientTable
+        loading={this.props.loading}
+        patientData={patients.slice(startIdx, startIdx + this.state.itemPerPage)}
+      ></PatientTable>
+    );
+
     return (
       <div>
         {patients.length > 0 ? (
           <div>
-            {cardLayout}
+            {tableLayout}
             <ObservationDrawer
               patient={this.state.currentSelectedPatient}
               visible={this.state.showDrawer}
