@@ -1,6 +1,6 @@
 import React from "react";
 import { requestObservation } from "../javascript/api";
-import { Drawer, Descriptions, message } from "antd";
+import { Drawer, Descriptions, Skeleton } from "antd";
 
 const keyGen = () => {
   let r = Math.random()
@@ -137,7 +137,17 @@ class ObservationDrawer extends React.Component {
                 {`${patient.address[0].line[0]}, ${patient.address[0].city}, ${patient.address[0].state}, ${patient.address[0].country}`}
               </Descriptions.Item>
             </Descriptions>
-            {observations}
+            {observations ? (
+              observations
+            ) : (
+              <div>
+                <Skeleton active />
+                <Skeleton active />
+                <Skeleton active />
+                <Skeleton active />
+                <Skeleton active />
+              </div>
+            )}
           </div>
         )}
       </Drawer>
