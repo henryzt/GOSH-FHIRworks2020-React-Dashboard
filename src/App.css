@@ -65,3 +65,13 @@
   float: unset !important;
   text-align: center !important;
 }
+
+.ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout-header {
+  display: flex;
+  flex-direction: row;
+}

@@ -13,10 +13,10 @@ import icon from "./img/icon.png";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout } from "antd";
+import { Layout, Select } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
-const { Header, Sider, Footer, Content } = Layout;
+const { Header, Sider, Footer } = Layout;
 
 class DesktopMenu extends React.Component {
   state = {
@@ -54,6 +54,12 @@ class DesktopMenu extends React.Component {
           ></div>
         </Link>
         <SideMenu></SideMenu>
+        <div style={{ flexGrow: 1 }}>
+          <Select defaultValue="lucy" style={{ width: "90%", padding: "5%" }}>
+            <Select.Option value="table">View as Table</Select.Option>
+            <Select.Option value="card">View as Cards</Select.Option>
+          </Select>
+        </div>
       </Sider>
     );
   }
@@ -102,7 +108,11 @@ class App extends React.Component {
           <Layout className="site-layout">
             <Header
               className="site-layout-background"
-              style={{ padding: 0, boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)", zIndex: 20 }}
+              style={{
+                padding: 0,
+                boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)",
+                zIndex: 20
+              }}
             >
               <h2 style={{ paddingLeft: 20 + "px" }}>
                 <Switch>
@@ -116,6 +126,13 @@ class App extends React.Component {
                   ))}
                 </Switch>
               </h2>
+
+              <div style={{ flexGrow: 1, textAlign: "right", paddingRight: "20px" }}>
+                <Select defaultValue="table" style={{ width: "135px" }}>
+                  <Select.Option value="table">View as Table</Select.Option>
+                  <Select.Option value="card">View as Cards</Select.Option>
+                </Select>
+              </div>
             </Header>
 
             <RouterContent></RouterContent>

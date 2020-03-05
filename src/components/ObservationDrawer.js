@@ -190,7 +190,7 @@ class ObservationDrawer extends React.Component {
 
         <Drawer
           title="Raw FHIR Data"
-          width={this.context.isMobile ? "100%" : "40%"}
+          width={this.context.isMobile ? "100%" : "50%"}
           closable={true}
           onClose={this.onChildrenDrawerClose}
           visible={this.state.rawDataDrawer}
