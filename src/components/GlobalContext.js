@@ -8,6 +8,10 @@ export class GlobalContextProvider extends React.Component {
     isMobile: false
   };
 
+  setViewInCard = viewInCard => {
+    this.setState({ ...this.state, viewInCard: viewInCard });
+  };
+
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions.bind(this));
@@ -23,8 +27,11 @@ export class GlobalContextProvider extends React.Component {
   }
 
   render() {
+    const { setViewInCard } = this;
     return (
-      <GlobalContext.Provider value={this.state}>{this.props.children}</GlobalContext.Provider>
+      <GlobalContext.Provider value={{ ...this.state, setViewInCard }}>
+        {this.props.children}
+      </GlobalContext.Provider>
     );
   }
 }

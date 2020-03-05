@@ -16,6 +16,8 @@ import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react
 import { Layout, Select } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
+import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
+
 const { Header, Sider, Footer } = Layout;
 
 class DesktopMenu extends React.Component {
@@ -54,12 +56,7 @@ class DesktopMenu extends React.Component {
           ></div>
         </Link>
         <SideMenu></SideMenu>
-        <div style={{ flexGrow: 1 }}>
-          <Select defaultValue="lucy" style={{ width: "90%", padding: "5%" }}>
-            <Select.Option value="table">View as Table</Select.Option>
-            <Select.Option value="card">View as Cards</Select.Option>
-          </Select>
-        </div>
+        <div style={{ flexGrow: 1 }}></div>
       </Sider>
     );
   }
@@ -88,6 +85,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  static contextType = GlobalContext;
+
+  handleViewChange = value => {
+    const { setViewInCard } = this.context;
+    console.log(setViewInCard, this.context);
+    setViewInCard(value == "card");
+  };
 
   render() {
     console.log(this.props);
@@ -128,10 +133,17 @@ class App extends React.Component {
               </h2>
 
               <div style={{ flexGrow: 1, textAlign: "right", paddingRight: "20px" }}>
-                <Select defaultValue="table" style={{ width: "135px" }}>
-                  <Select.Option value="table">View as Table</Select.Option>
-                  <Select.Option value="card">View as Cards</Select.Option>
-                </Select>
+                <GlobalContextProvider>
+                  <Select
+                    defaultValue="table"
+                    style={{ width: "135px" }}
+                    onChange={this.handleViewChange}
+                  >
+                    aaaa
+                    <Select.Option value="table">View as Table</Select.Option>
+                    <Select.Option value="card">View as Cards</Select.Option>
+                  </Select>
+                </GlobalContextProvider>
               </div>
             </Header>
 
