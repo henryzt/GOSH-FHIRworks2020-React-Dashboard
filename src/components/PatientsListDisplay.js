@@ -76,10 +76,7 @@ class PatientsListDisplay extends React.Component {
 
     // ---------------------------- Table view
     const tableLayout = (
-      <PatientTable
-        loading={this.props.loading}
-        patientData={patients.slice(startIdx, startIdx + this.state.itemPerPage)}
-      ></PatientTable>
+      <PatientTable loading={this.props.loading} patientData={patients}></PatientTable>
     );
 
     return (

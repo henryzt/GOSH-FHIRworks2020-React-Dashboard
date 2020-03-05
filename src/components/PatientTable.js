@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Table } from "antd";
 
+const moment = require("moment");
+
 class PatientTable extends Component {
   constructor(props) {
     super(props);
@@ -34,6 +36,8 @@ class PatientTable extends Component {
       patient.address = element.address?.[0]?.line[0];
       patient.country = element.address?.[0]?.country;
       patient.gender = element.gender;
+      patient.birthDate = element.birthDate;
+      patient.age = moment().diff(element.birthDate, "years");
       tableData.push(patient);
     });
 
@@ -53,49 +57,72 @@ class PatientTable extends Component {
         dataIndex: "name",
         key: "name",
         render: text => <a>{text}</a>,
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.name.localeCompare(b.name)
       },
       {
         title: "ID",
         dataIndex: "id",
         key: "id",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.id.localeCompare(b.id)
       },
       {
         title: "Gender",
         dataIndex: "gender",
         key: "gender",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.gender.localeCompare(b.gender)
+      },
+      {
+        title: "Brith Date",
+        dataIndex: "birthDate",
+        key: "birthDate",
+        ellipsis: true,
+        sorter: (a, b) => a.birthDate.localeCompare(b.birthDate)
+      },
+      {
+        title: "Age",
+        dataIndex: "age",
+        key: "age",
+        ellipsis: true,
+        sorter: true,
+        sorter: (a, b) => a.age - b.age
       },
       {
         title: "language",
         dataIndex: "language",
         key: "language",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.language.localeCompare(b.language)
       },
       {
         title: "Phone",
         dataIndex: "phone",
         key: "phone",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.phone.localeCompare(b.phone)
       },
       {
         title: "Marital Status",
         dataIndex: "maritalStatus",
         key: "maritalStatus",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.maritalStatus.localeCompare(b.maritalStatus)
       },
       {
         title: "Address",
         dataIndex: "address",
         key: "address",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.address.localeCompare(b.address)
       },
       {
         title: "Country",
         dataIndex: "country",
         key: "country",
-        ellipsis: true
+        ellipsis: true,
+        sorter: (a, b) => a.country.localeCompare(b.country)
       }
     ];
 
