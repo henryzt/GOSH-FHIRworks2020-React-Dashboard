@@ -58,3 +58,8 @@
 .ant-descriptions-title {
   margin-top: 20px;
 }
+
+.ant-table-pagination {
+  float: unset !important;
+  text-align: center !important;
+}

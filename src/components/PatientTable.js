@@ -45,7 +45,7 @@ class PatientTable extends Component {
   };
 
   render() {
-    const { patientData, loading } = this.props;
+    const { loading } = this.props;
 
     if (loading) {
       return <div></div>;
@@ -58,6 +58,7 @@ class PatientTable extends Component {
         key: "name",
         render: text => <a>{text}</a>,
         ellipsis: true,
+        width: 200,
         sorter: (a, b) => a.name.localeCompare(b.name)
       },
       {
@@ -127,17 +128,11 @@ class PatientTable extends Component {
     ];
 
     return (
-      <Table columns={columns} dataSource={this.state.tableData} />
-
-      // {patientData && (
-      //   <div>
-      //     <p>{patientData.maritalStatus.text + ", " + patientData.gender}</p>
-      //     <p>{patientData.birthDate + ", " + patientData.communication[0].language.text}</p>
-      //     <p>{patientData.telecom.value}</p>
-      //     <p>{patientData.id}</p>
-      //     <p>{patientData.address[0].line[0] + ", " + patientData.address[0].country}</p>
-      //   </div>
-      // )}
+      <Table
+        columns={columns}
+        pagination={{ showSizeChanger: true }}
+        dataSource={this.state.tableData}
+      />
     );
   }
 }
