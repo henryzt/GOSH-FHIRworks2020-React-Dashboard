@@ -72,7 +72,7 @@ class ObservationDrawer extends React.Component {
     const { visible } = this.props;
     const patient = this.props.patient && this.props.patient.resource;
 
-    console.log("CONTEXT UPDATE", this.context);
+    // console.log("CONTEXT UPDATE", this.context);
     const ViewRawBtn = props => {
       return (
         <div style={{ margin: "auto", textAlign: "center", padding: "10px 0" }}>

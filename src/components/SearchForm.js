@@ -23,17 +23,17 @@ const SearchForm = props => {
       onFinish={onFinish}
     >
       <Row gutter={24}>
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={1}>
+        <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={1}>
           <Form.Item name={`name`} label={`Patient Name`}>
             <Input placeholder="Enter Patient's first or last name to filter" />
           </Form.Item>
         </Col>
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={2}>
+        <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={2}>
           <Form.Item name="birthdate" label="Birthdate Range">
             <RangePicker />
           </Form.Item>
         </Col>
-        <Col sm={24} md={12} lg={8} className="search_inputs" key={3}>
+        <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={3}>
           <Form.Item name="gender" label="Gender">
             <Select placeholder="Select a gender to filter" allowClear>
               <Option value="male">Male</Option>
@@ -44,30 +44,30 @@ const SearchForm = props => {
 
         {expand && (
           <React.Fragment>
-            <Col sm={24} md={12} lg={8} className="search_inputs" key={4}>
+            <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={4}>
               <Form.Item name={`phone`} label={`Phone number`}>
                 <Input placeholder="Enter phone number to filter" />
               </Form.Item>
             </Col>
 
-            <Col sm={24} md={12} lg={8} className="search_inputs" key={5}>
+            <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={5}>
               <Form.Item name={`address`} label={`Country and Address`}>
                 <Input placeholder="Enter counrty code to filter" />
               </Form.Item>
             </Col>
 
-            <Col sm={24} md={12} lg={8} className="search_inputs" key={6}>
+            <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={6}>
               <Form.Item name={`maritalStatus`} label={`Marital Status`}>
                 <Input placeholder="Enter marital status to filter" />
               </Form.Item>
             </Col>
 
-            <Col sm={24} md={12} lg={8} className="search_inputs" key={7}>
+            <Col xs={24} sm={24} md={12} lg={8} className="search_inputs" key={7}>
               <Form.Item name={`id`} label={`Patient ID`}>
                 <Input placeholder="Enter Patient ID to filter" />
               </Form.Item>
             </Col>
-            <Col sm={24} md={23} lg={16} span={16} key={8}>
+            <Col xs={24} sm={24} md={23} lg={16} span={16} key={8}>
               <Form.Item name={"anythingElse"} label="Search for anything else">
                 <Input.TextArea placeholder="Just type anything you would like to search, you can search for Social Security Number, Driver's License, Passport Number, Ethics etc. Regular expression is supported." />
               </Form.Item>
@@ -77,9 +77,9 @@ const SearchForm = props => {
       </Row>
 
       <Row>
-        <Col span={8}>
+        <Col xs={24} sm={24} md={8} lg={8} span={8}>
           <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
-            <Checkbox>
+            <Checkbox checked>
               <Tooltip placement="right" title="Weakly match any content close to the search query">
                 Blurred Match
               </Tooltip>
@@ -87,6 +87,10 @@ const SearchForm = props => {
           </Form.Item>
         </Col>
         <Col
+          xs={24}
+          sm={24}
+          md={16}
+          lg={16}
           span={16}
           style={{
             textAlign: "right"
