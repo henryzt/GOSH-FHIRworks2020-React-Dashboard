@@ -15,7 +15,26 @@ import GlobalContextConsumer from "./components/GlobalContext";
 const { Header, Sider, Footer, Content } = Layout;
 
 const DesktopMenu = () => {
-  return <div>Example</div>;
+  return (
+    <Sider
+      collapsible
+      breakpoint="lg"
+      width="230"
+      style={{
+        boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
+        overflow: "auto",
+        height: "100vh",
+        position: "sticky",
+        top: 0,
+        left: 0
+      }}
+    >
+      <div className="logo">
+        <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
+      </div>
+      <SideMenu></SideMenu>
+    </Sider>
+  );
 };
 
 const routes = [
@@ -47,36 +66,15 @@ class App extends React.Component {
 
     return (
       <Router>
-        <GlobalContextConsumer>
-          {value => {
-            console.log(value);
-            return (
-              <div>
-                {value.isMobile ? "MOBILE" : "NOT"}
-                {value.width}
-              </div>
-            );
-          }}
-        </GlobalContextConsumer>
         <Layout style={{ minHeight: 100 + "vh" }}>
-          <Sider
-            collapsible
-            breakpoint="lg"
-            width="230"
-            style={{
-              boxShadow: "7px 0px 20px -10px rgba(0,0,0,0.35)",
-              overflow: "auto",
-              height: "100vh",
-              position: "sticky",
-              top: 0,
-              left: 0
+          <GlobalContextConsumer>
+            {value => {
+              if (!value.isMobile) {
+                return <DesktopMenu></DesktopMenu>;
+              }
             }}
-          >
-            <div className="logo">
-              <h2 style={{ color: "white" }}>FHIR Dashboard</h2>
-            </div>
-            <SideMenu></SideMenu>
-          </Sider>
+          </GlobalContextConsumer>
+
           <Layout className="site-layout">
             <Header
               className="site-layout-background"
