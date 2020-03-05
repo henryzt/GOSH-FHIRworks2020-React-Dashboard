@@ -50,7 +50,12 @@ class App extends React.Component {
         <GlobalContextConsumer>
           {value => {
             console.log(value);
-            return <div>{value.isMobile ? "MOBILE" : "NOT"}</div>;
+            return (
+              <div>
+                {value.isMobile ? "MOBILE" : "NOT"}
+                {value.width}
+              </div>
+            );
           }}
         </GlobalContextConsumer>
         <Layout style={{ minHeight: 100 + "vh" }}>
