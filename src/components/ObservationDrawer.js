@@ -69,6 +69,21 @@ class ObservationDrawer extends React.Component {
     const { visible } = this.props;
     const patient = this.props.patient && this.props.patient.resource;
 
+    const ViewRawBtn = props => {
+      return (
+        <div style={{ margin: "auto", textAlign: "center", padding: "10px 0" }}>
+          <a
+            onClick={() => {
+              this.openRawDataDrawer(props.object);
+            }}
+            disabled={this.props.loading}
+          >
+            View Raw FHIR Data
+          </a>
+        </div>
+      );
+    };
+
     let observations =
       this.state.observation &&
       this.state.observation.map(entry => {
@@ -120,16 +135,8 @@ class ObservationDrawer extends React.Component {
                 {obs.effectiveDateTime}
               </Descriptions.Item>
             </Descriptions>
-            <div style={{ margin: "auto", textAlign: "center", padding: "10px 0" }}>
-              <a
-                onClick={() => {
-                  this.openRawDataDrawer(obs);
-                }}
-                disabled={this.props.loading}
-              >
-                View Raw FHIR Data
-              </a>
-            </div>
+
+            <ViewRawBtn object={obs}></ViewRawBtn>
           </div>
         );
       });
@@ -162,6 +169,7 @@ class ObservationDrawer extends React.Component {
                 {`${patient.address[0].line[0]}, ${patient.address[0].city}, ${patient.address[0].state}, ${patient.address[0].country}`}
               </Descriptions.Item>
             </Descriptions>
+            <ViewRawBtn object={patient}></ViewRawBtn>
             {observations ? (
               observations
             ) : (
