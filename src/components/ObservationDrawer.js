@@ -9,10 +9,11 @@ const keyGen = () => {
   return r;
 };
 
+// to match all kinds of values, see https://www.hl7.org/fhir/observation.html
 const findValueKey = observation => {
   let key,
     keys = [];
-  let filter = new RegExp("value.*", "g");
+  let filter = new RegExp("value.*|component", "g");
   for (key in observation) if (observation.hasOwnProperty(key) && filter.test(key)) keys.push(key);
   //   console.log(keys);
   return keys[0];
@@ -69,6 +70,17 @@ class ObservationDrawer extends React.Component {
               </Descriptions.Item>
             );
           });
+
+          if (valueKey == "component") {
+            //special case - blood pressure
+            valueItems = obs.component.map(blood => {
+              return (
+                <Descriptions.Item key={keyGen()} label={blood.code?.text}>
+                  {blood.valueQuantity?.value + " " + blood.valueQuantity?.unit}
+                </Descriptions.Item>
+              );
+            });
+          }
         }
         return (
           <div key={keyGen()} style={{ wordBreak: "break-all" }}>
@@ -82,16 +94,16 @@ class ObservationDrawer extends React.Component {
               <Descriptions.Item key={keyGen()} label="ID">
                 {obs.id}
               </Descriptions.Item>
+              {valueItems}
               <Descriptions.Item key={keyGen()} label="Category">
                 {obs.category?.[0]?.coding?.[0].display}
-              </Descriptions.Item>
-              <Descriptions.Item key={keyGen()} label="effectiveDateTime">
-                {obs.effectiveDateTime}
               </Descriptions.Item>
               <Descriptions.Item key={keyGen()} label="issued">
                 {obs.issued}
               </Descriptions.Item>
-              {valueItems}
+              <Descriptions.Item key={keyGen()} label="effectiveDateTime">
+                {obs.effectiveDateTime}
+              </Descriptions.Item>
             </Descriptions>
           </div>
         );
@@ -104,7 +116,7 @@ class ObservationDrawer extends React.Component {
         closable={true}
         onClose={this.onClose}
         visible={visible}
-        width={"40%"}
+        width={"60%"}
       >
         {patient && (
           <div key={keyGen()}>
