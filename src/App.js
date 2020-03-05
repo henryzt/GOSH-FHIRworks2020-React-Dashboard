@@ -5,6 +5,7 @@ import PatientPage from "./routes/patients";
 import SearchPage from "./routes/search";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
+import MobileTabBar from "./components/MobileTabBar";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
@@ -71,6 +72,8 @@ class App extends React.Component {
             {value => {
               if (!value.isMobile) {
                 return <DesktopMenu></DesktopMenu>;
+              } else {
+                return <MobileTabBar></MobileTabBar>;
               }
             }}
           </GlobalContextConsumer>
