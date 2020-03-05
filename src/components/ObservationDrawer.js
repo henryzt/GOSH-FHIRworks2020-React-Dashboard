@@ -15,7 +15,6 @@ const findValueKey = observation => {
     keys = [];
   let filter = new RegExp("value.*|component", "g");
   for (key in observation) if (observation.hasOwnProperty(key) && filter.test(key)) keys.push(key);
-  //   console.log(keys);
   return keys[0];
 };
 
@@ -36,7 +35,9 @@ class ObservationDrawer extends React.Component {
 
       this.setState({
         loading: false,
-        observation: json
+        observation: json,
+        rawDataDrawer: false,
+        rawDataDrawerData: null
       });
     }
   }
@@ -48,6 +49,19 @@ class ObservationDrawer extends React.Component {
     });
     console.log(this.state);
     this.props.onClose();
+  };
+
+  onChildrenDrawerClose = () => {
+    this.setState({
+      rawDataDrawer: false
+    });
+  };
+
+  openRawDataDrawer = data => {
+    this.setState({
+      rawDataDrawer: true,
+      rawDataDrawerData: data
+    });
   };
 
   render() {
@@ -105,6 +119,16 @@ class ObservationDrawer extends React.Component {
                 {obs.effectiveDateTime}
               </Descriptions.Item>
             </Descriptions>
+            <div style={{ margin: "auto", textAlign: "center", padding: "10px 0" }}>
+              <a
+                onClick={() => {
+                  this.openRawDataDrawer(obs);
+                }}
+                disabled={this.props.loading}
+              >
+                View Raw FHIR Data
+              </a>
+            </div>
           </div>
         );
       });
@@ -150,6 +174,16 @@ class ObservationDrawer extends React.Component {
             )}
           </div>
         )}
+
+        <Drawer
+          title="Raw Data"
+          width={"30%"}
+          closable={true}
+          onClose={this.onChildrenDrawerClose}
+          visible={this.state.rawDataDrawer}
+        >
+          {JSON.stringify(this.state.rawDataDrawerData)}
+        </Drawer>
       </Drawer>
     );
   }
