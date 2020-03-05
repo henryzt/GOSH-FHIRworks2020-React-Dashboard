@@ -2,17 +2,10 @@ import React, { Component } from "react";
 import { TabBar } from "antd-mobile";
 import "antd-mobile/dist/antd-mobile.css";
 
-const Icon = props => {
-  return (
-    <div
-      style={{
-        width: "22px",
-        height: "22px",
-        background: "url(" + props.path + ") center center /  21px 21px no-repeat"
-      }}
-    />
-  );
-};
+import { HomeOutlined, TeamOutlined, SearchOutlined, BarChartOutlined } from "@ant-design/icons";
+
+const iconNonSelectStyle = { fontSize: "22px" };
+const iconSelectedStyle = { fontSize: "22px", color: "#33A3F4" };
 
 class TabBarMenu extends React.Component {
   constructor(props) {
@@ -28,105 +21,59 @@ class TabBarMenu extends React.Component {
       <div style={{ position: "fixed", height: "100%", width: "100%", top: 0 }}>
         <TabBar unselectedTintColor="#949494" tintColor="#33A3F4" barTintColor="white">
           <TabBar.Item
-            title="Life"
-            key="Life"
-            icon={
-              <Icon path="https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg"></Icon>
-            }
-            selectedIcon={
-              <div
-                style={{
-                  width: "22px",
-                  height: "22px",
-                  background:
-                    "url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat"
-                }}
-              />
-            }
-            selected={this.state.selectedTab === "blueTab"}
+            title="Home"
+            key="Home"
+            icon={<HomeOutlined style={iconNonSelectStyle} />}
+            selectedIcon={<HomeOutlined style={iconSelectedStyle} />}
+            selected={this.state.selectedTab === "Home"}
             onPress={() => {
               this.setState({
-                selectedTab: "blueTab"
+                selectedTab: "Home"
               });
             }}
             data-seed="logId"
           ></TabBar.Item>
+
           <TabBar.Item
-            icon={
-              <div
-                style={{
-                  width: "22px",
-                  height: "22px",
-                  background:
-                    "url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat"
-                }}
-              />
-            }
-            selectedIcon={
-              <div
-                style={{
-                  width: "22px",
-                  height: "22px",
-                  background:
-                    "url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat"
-                }}
-              />
-            }
-            title="Koubei"
-            key="Koubei"
-            badge={"new"}
-            selected={this.state.selectedTab === "redTab"}
+            title="Patients"
+            key="Patients"
+            icon={<TeamOutlined style={iconNonSelectStyle} />}
+            selectedIcon={<TeamOutlined style={iconSelectedStyle} />}
+            selected={this.state.selectedTab === "Patients"}
             onPress={() => {
               this.setState({
-                selectedTab: "redTab"
+                selectedTab: "Patients"
               });
             }}
-            data-seed="logId1"
+            data-seed="logId"
           ></TabBar.Item>
+
           <TabBar.Item
-            icon={
-              <div
-                style={{
-                  width: "22px",
-                  height: "22px",
-                  background:
-                    "url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat"
-                }}
-              />
-            }
-            selectedIcon={
-              <div
-                style={{
-                  width: "22px",
-                  height: "22px",
-                  background:
-                    "url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat"
-                }}
-              />
-            }
-            title="Friend"
-            key="Friend"
-            dot
-            selected={this.state.selectedTab === "greenTab"}
+            title="Search"
+            key="Search"
+            icon={<SearchOutlined style={iconNonSelectStyle} />}
+            selectedIcon={<SearchOutlined style={iconSelectedStyle} />}
+            selected={this.state.selectedTab === "Search"}
             onPress={() => {
               this.setState({
-                selectedTab: "greenTab"
+                selectedTab: "Search"
               });
             }}
+            data-seed="logId"
           ></TabBar.Item>
+
           <TabBar.Item
-            icon={{ uri: "https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg" }}
-            selectedIcon={{
-              uri: "https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg"
-            }}
-            title="My"
-            key="my"
-            selected={this.state.selectedTab === "yellowTab"}
+            title="Statistics"
+            key="Statistics"
+            icon={<BarChartOutlined style={iconNonSelectStyle} />}
+            selectedIcon={<BarChartOutlined style={iconSelectedStyle} />}
+            selected={this.state.selectedTab === "Statistics"}
             onPress={() => {
               this.setState({
-                selectedTab: "yellowTab"
+                selectedTab: "Statistics"
               });
             }}
+            data-seed="logId"
           ></TabBar.Item>
         </TabBar>
       </div>
