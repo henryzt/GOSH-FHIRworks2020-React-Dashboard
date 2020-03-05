@@ -10,6 +10,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
 import { Layout } from "antd";
+import GlobalContextConsumer from "./components/GlobalContext";
 
 const { Header, Sider, Footer, Content } = Layout;
 
@@ -41,13 +42,17 @@ class App extends React.Component {
     super(props);
   }
 
-  // static context = GlobalContext;
-
   render() {
     console.log(this.props);
-    // console.log(context);
+
     return (
       <Router>
+        <GlobalContextConsumer>
+          {value => {
+            console.log(value);
+            return <div>{value.isMobile ? "MOBILE" : "NOT"}</div>;
+          }}
+        </GlobalContextConsumer>
         <Layout style={{ minHeight: 100 + "vh" }}>
           <Sider
             collapsible

@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const GlobalContext = React.createContext("light");
+import { GlobalContextProvider } from "./components/GlobalContext";
 
 class Site extends React.Component {
   constructor(props) {
@@ -13,9 +13,9 @@ class Site extends React.Component {
 
   render() {
     return (
-      <GlobalContext.Provider value={{ isMobile: false }}>
+      <GlobalContextProvider value="what">
         <App />
-      </GlobalContext.Provider>
+      </GlobalContextProvider>
     );
   }
 }
