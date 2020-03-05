@@ -4,12 +4,16 @@ import ReactDOM from "react-dom";
 import { Form, Row, Col, Input, Button, DatePicker, Select, Checkbox, Tooltip } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
+import { GlobalContext } from "../components/GlobalContext";
+
 const { RangePicker } = DatePicker;
 const { Option } = Select;
 
 const SearchForm = props => {
   const [expand, setExpand] = useState(false);
   const [form] = Form.useForm();
+
+  const context = React.useContext(GlobalContext);
 
   const onFinish = values => {
     props.searchRequest(values);
@@ -77,7 +81,16 @@ const SearchForm = props => {
       </Row>
 
       <Row>
-        <Col xs={24} sm={24} md={8} lg={8} span={8}>
+        <Col
+          xs={24}
+          sm={8}
+          md={8}
+          lg={8}
+          span={8}
+          style={{
+            textAlign: context.isMobile ? "center" : "left"
+          }}
+        >
           <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
             <Checkbox checked>
               <Tooltip placement="right" title="Weakly match any content close to the search query">
@@ -88,12 +101,12 @@ const SearchForm = props => {
         </Col>
         <Col
           xs={24}
-          sm={24}
+          sm={16}
           md={16}
           lg={16}
           span={16}
           style={{
-            textAlign: "right"
+            textAlign: context.isMobile ? "center" : "right"
           }}
         >
           <a

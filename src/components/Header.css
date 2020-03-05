@@ -10,4 +10,5 @@
     url("../img/homebg.jpg");
   background-size: cover;
   border-radius: 0;
+  padding: 0 20px;
 }

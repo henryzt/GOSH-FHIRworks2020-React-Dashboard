@@ -6,6 +6,12 @@
   margin: 50px;
 }
 
+@media (max-width: 575px) {
+  .ant-advanced-search-form {
+    margin: 20px;
+  }
+}
+
 .ant-advanced-search-form .ant-form-item {
   display: flex;
 }
