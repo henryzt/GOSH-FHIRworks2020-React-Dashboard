@@ -3,6 +3,8 @@ import { requestObservation } from "../javascript/api";
 import { Drawer, Descriptions, Skeleton } from "antd";
 import ReactJson from "react-json-view";
 
+import { GlobalContext } from "../components/GlobalContext";
+
 const keyGen = () => {
   let r = Math.random()
     .toString(36)
@@ -29,6 +31,7 @@ class ObservationDrawer extends React.Component {
     };
   }
 
+  static contextType = GlobalContext;
   //load observation
   async componentDidUpdate() {
     if (this.props.patient && !this.state.observation) {
@@ -69,6 +72,7 @@ class ObservationDrawer extends React.Component {
     const { visible } = this.props;
     const patient = this.props.patient && this.props.patient.resource;
 
+    console.log("CONTEXT UPDATE", this.context);
     const ViewRawBtn = props => {
       return (
         <div style={{ margin: "auto", textAlign: "center", padding: "10px 0" }}>
@@ -148,7 +152,7 @@ class ObservationDrawer extends React.Component {
         closable={true}
         onClose={this.onClose}
         visible={visible}
-        width={"60%"}
+        width={this.context.isMobile ? "100%" : "60%"}
       >
         {patient && (
           <div key={keyGen()}>
@@ -186,13 +190,12 @@ class ObservationDrawer extends React.Component {
 
         <Drawer
           title="Raw FHIR Data"
-          width={"40%"}
+          width={this.context.isMobile ? "100%" : "40%"}
           closable={true}
           onClose={this.onChildrenDrawerClose}
           visible={this.state.rawDataDrawer}
         >
           <ReactJson src={this.state.rawDataDrawerData} />
-          {/* {JSON.stringify(this.state.rawDataDrawerData)} */}
         </Drawer>
       </Drawer>
     );
