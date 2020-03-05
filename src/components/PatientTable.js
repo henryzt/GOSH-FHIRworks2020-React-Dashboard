@@ -56,16 +56,17 @@ class PatientTable extends Component {
         title: "Name",
         dataIndex: "name",
         key: "name",
-        render: text => <a>{text}</a>,
         ellipsis: true,
         width: 200,
-        sorter: (a, b) => a.name.localeCompare(b.name)
+        sorter: (a, b) => a.name.localeCompare(b.name),
+        fixed: "left"
       },
       {
         title: "ID",
         dataIndex: "id",
         key: "id",
         ellipsis: true,
+        width: 330,
         sorter: (a, b) => a.id.localeCompare(b.id)
       },
       {
@@ -73,6 +74,7 @@ class PatientTable extends Component {
         dataIndex: "gender",
         key: "gender",
         ellipsis: true,
+        width: 100,
         sorter: (a, b) => a.gender.localeCompare(b.gender)
       },
       {
@@ -80,6 +82,7 @@ class PatientTable extends Component {
         dataIndex: "birthDate",
         key: "birthDate",
         ellipsis: true,
+        width: 150,
         sorter: (a, b) => a.birthDate.localeCompare(b.birthDate)
       },
       {
@@ -87,7 +90,7 @@ class PatientTable extends Component {
         dataIndex: "age",
         key: "age",
         ellipsis: true,
-        sorter: true,
+        width: 100,
         sorter: (a, b) => a.age - b.age
       },
       {
@@ -102,6 +105,7 @@ class PatientTable extends Component {
         dataIndex: "phone",
         key: "phone",
         ellipsis: true,
+        width: 150,
         sorter: (a, b) => a.phone.localeCompare(b.phone)
       },
       {
@@ -109,6 +113,7 @@ class PatientTable extends Component {
         dataIndex: "maritalStatus",
         key: "maritalStatus",
         ellipsis: true,
+        width: 150,
         sorter: (a, b) => a.maritalStatus.localeCompare(b.maritalStatus)
       },
       {
@@ -116,6 +121,7 @@ class PatientTable extends Component {
         dataIndex: "address",
         key: "address",
         ellipsis: true,
+        width: 300,
         sorter: (a, b) => a.address.localeCompare(b.address)
       },
       {
@@ -123,7 +129,16 @@ class PatientTable extends Component {
         dataIndex: "country",
         key: "country",
         ellipsis: true,
+        width: 110,
         sorter: (a, b) => a.country.localeCompare(b.country)
+      },
+      {
+        title: "Observations",
+        dataIndex: "observations",
+        key: "observations",
+        width: 120,
+        render: () => <a>View</a>,
+        fixed: "right"
       }
     ];
 
