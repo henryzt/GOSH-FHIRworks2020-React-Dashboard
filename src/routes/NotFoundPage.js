@@ -11,10 +11,18 @@ const NotFoundPage = props => {
   console.log(location, match);
 
   //add special redirect rule for gh pages
-  if (location.pathname.includes("/GOSH-FHIRworks2020-React-Dashboard") && location.hash == "") {
+  if (
+    window.location.hostname == "henryz00.github.io" &&
+    location.pathname.includes("/GOSH-FHIRworks2020-React-Dashboard") &&
+    location.hash == ""
+  ) {
     history.push("/#/");
     return <div></div>;
   }
+
+  const returnHome = () => {
+    history.push("/");
+  };
 
   return (
     <div>
@@ -23,7 +31,11 @@ const NotFoundPage = props => {
         status="404"
         title="404"
         subTitle="Sorry, the page you visited does not exist."
-        extra={<Button type="primary">Back Home</Button>}
+        extra={
+          <Button type="primary" onClick={returnHome}>
+            Back Home
+          </Button>
+        }
       />
     </div>
   );
