@@ -25,6 +25,16 @@ const findOccurence = (data, key) => {
   return occ;
 };
 
+const findAgeOccurence = (data, key) => {
+  const occ = data.reduce(function(sums, entry) {
+    const age = entry[key];
+    const ageRange = age - (age % 10);
+    sums[ageRange] = (sums[ageRange] || 0) + 1;
+    return sums;
+  }, {});
+  return occ;
+};
+
 const findTop = (data, topNum, displayOther, shuffle) => {
   const findSumFuc = (total, num) => {
     return total + num;
@@ -114,13 +124,30 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover,
-          label: "City"
+          hoverBackgroundColor: bgColorsHover
         }
       ]
     };
     console.log(occ);
     return <Pie data={data} />;
+  };
+
+  AgeChart = () => {
+    const occ = findTop(findAgeOccurence(this.state.patients, "age"), 10, true);
+    console.log(occ);
+    const data = {
+      labels: Object.keys(occ),
+      datasets: [
+        {
+          data: Object.values(occ),
+          backgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover,
+          label: "Number of people"
+        }
+      ]
+    };
+    console.log(occ);
+    return <Bar data={data} />;
   };
 
   render() {
@@ -140,7 +167,7 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.LanguageChart()} title="Languages"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={<div>age</div>}></DisplayCard>
+                <DisplayCard children={this.AgeChart()} title="Age Groups"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={<div>maritalStatus</div>}></DisplayCard>
