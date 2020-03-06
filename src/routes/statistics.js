@@ -232,9 +232,6 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.LanguageChart()} title="Top 5 Languages"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
-              </Col>
-              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard
                   children={this.MaritalStatusChart()}
                   title="Marital Status"
@@ -242,6 +239,9 @@ class StatisticsPage extends React.Component {
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={this.BirthMonthChart()} title="Birth Month"></DisplayCard>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
               </Col>
             </Row>
           </div>

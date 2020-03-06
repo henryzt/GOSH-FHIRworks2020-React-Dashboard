@@ -12,7 +12,6 @@ const NotFoundPage = props => {
 
   //add special redirect rule for gh pages
   if (
-    window.location.hostname == "henryz00.github.io" &&
     location.hash === "" &&
     (location.pathname == "/GOSH-FHIRworks2020-React-Dashboard" ||
       location.pathname == "/GOSH-FHIRworks2020-React-Dashboard/")

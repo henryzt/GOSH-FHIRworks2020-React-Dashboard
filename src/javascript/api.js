@@ -1,6 +1,8 @@
 let patientListDemo = require("./patientDemoData.json");
 let observationDemo = require("./observationDemoData.json");
 
+const SERVER_URL = "http://178.62.0.181:5000/api/";
+
 const moment = require("moment");
 
 const getPatientDemo = () => {
@@ -22,7 +24,7 @@ function combinePatientsBundle(json) {
 
 function requestObservation(id) {
   return new Promise((resolve, reject) => {
-    fetch("http://178.62.0.181:5000/api/Observation/" + id)
+    fetch(SERVER_URL + "Observation/" + id)
       .then(async res => {
         let json = await res.json();
         console.log(json);
@@ -44,7 +46,7 @@ function request() {
         resolve(JSON.parse(localCache));
       }, 1000);
     } else {
-      fetch("http://178.62.0.181:5000/api/Patient/")
+      fetch(SERVER_URL + "Patient/")
         .then(async res => {
           let json = await res.json();
           console.log(json);
