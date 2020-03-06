@@ -19,22 +19,23 @@
   background-size: contain !important;
 }
 
-.site-layout .site-layout-header {
-  background: #fff;
-}
-
 .site-layout {
   position: relative;
 }
 
-.site-layout-header {
+.site-layout .site-layout-header {
+  background: #fff;
   position: sticky;
   left: 0;
   right: 0;
   top: 0;
   padding: 0;
-  box-shadow: "0px 6px 20px -5px rgba(0,0,0,0.5)";
+  box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.2);
   z-index: 20;
+}
+
+.ant-layout-header {
+  padding: 0 !important;
 }
 
 /* page transition aniation */
