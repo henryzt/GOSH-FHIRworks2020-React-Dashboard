@@ -9,11 +9,14 @@ import MobileTabBar from "./components/MobileTabBar";
 
 import logo from "./img/fhir-logo-long.png";
 import icon from "./img/icon.png";
+import profile from "./img/profile.png";
+
+import { CaretDownOutlined } from "@ant-design/icons";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Select } from "antd";
+import { Layout, Select, Avatar } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -144,6 +147,8 @@ class App extends React.Component {
                     <Select.Option value="card">View as Cards</Select.Option>
                   </Select>
                 </GlobalContextProvider>
+                <Avatar src={profile} style={{ marginLeft: "20px", marginRight: "5px" }} />
+                <CaretDownOutlined />
               </div>
             </Header>
 
