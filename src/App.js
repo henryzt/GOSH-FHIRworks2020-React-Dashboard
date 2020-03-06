@@ -101,9 +101,13 @@ class App extends React.Component {
 
   render() {
     console.log(this.props);
+    console.log(window.location.hostname);
+
+    const basename =
+      window.location.hostname == "henryz00.github.io" ? "GOSH-FHIRworks2020-React-Dashboard" : "";
 
     return (
-      <Router>
+      <Router basename={basename}>
         <Layout style={{ minHeight: 100 + "vh" }}>
           <GlobalContextConsumer>
             {value => {
