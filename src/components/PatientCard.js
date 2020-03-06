@@ -23,7 +23,7 @@ class PatientCard extends Component {
             View Detail
           </a>
         }
-        style={{ width: "100%", margin: "10px" }}
+        style={{ width: "auto", margin: "5px" }}
         loading={loading}
         hoverable
       >
