@@ -144,10 +144,7 @@ class App extends React.Component {
           </GlobalContextConsumer>
 
           <Layout className="site-layout">
-            <Header
-              className="site-layout-header"
-              }}
-            >
+            <Header className="site-layout-header">
               <h2 style={{ paddingLeft: 20 + "px" }}>
                 <Switch>
                   {routes.map((route, index) => (
