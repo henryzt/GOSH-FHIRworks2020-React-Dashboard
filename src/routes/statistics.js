@@ -5,8 +5,21 @@ import { Result, Button, Row, Col, Card, message } from "antd";
 
 import { Doughnut, Bar, Pie, Polar, HorizontalBar } from "react-chartjs-2";
 
-const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
-const bgColorsHover = ["#FF6384", "#36A2EB", "#FFCE56"];
+const bgColors = [
+  "#FF6384",
+  "#36A2EB",
+  "#FFCE56",
+  "#75daad",
+  "#FF6633",
+  "#FFB399",
+  "#ad62aa",
+  "#ed6663",
+  "#05dfd7",
+  "#ffbd69",
+  "#00a8cc",
+  "#ff677d"
+];
+// const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
 
 const DisplayCard = ({ children, title }) => {
   return (
@@ -89,7 +102,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColors
         }
       ]
     };
@@ -106,7 +119,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover,
+          hoverBackgroundColor: bgColors,
           label: "City"
         }
       ]
@@ -124,7 +137,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColors
         }
       ]
     };
@@ -141,7 +154,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover,
+          hoverBackgroundColor: bgColors,
           label: "Number of people"
         }
       ]
@@ -159,12 +172,29 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColors
         }
       ]
     };
     console.log(occ);
     return <HorizontalBar data={data} />;
+  };
+
+  BirthMonthChart = () => {
+    const occ = findOccurence(this.state.patients, "birthMonth");
+    console.log(occ);
+    const data = {
+      labels: Object.keys(occ),
+      datasets: [
+        {
+          data: Object.values(occ),
+          backgroundColor: bgColors,
+          hoverBackgroundColor: bgColors
+        }
+      ]
+    };
+    console.log(occ);
+    return <Bar data={data} />;
   };
 
   render() {
@@ -191,6 +221,9 @@ class StatisticsPage extends React.Component {
                   children={this.MaritalStatusChart()}
                   title="Marital Status"
                 ></DisplayCard>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                <DisplayCard children={this.BirthMonthChart()} title="Birth Month"></DisplayCard>
               </Col>
             </Row>
           </div>

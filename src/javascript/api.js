@@ -104,6 +104,7 @@ function parseAllPatientData(patients) {
     patient.country = element.address?.[0]?.country;
     patient.gender = element.gender;
     patient.birthDate = element.birthDate;
+    patient.birthMonth = moment(element.birthDate).format("MMMM");
     patient.age = moment().diff(element.birthDate, "years");
     patient.raw = elementRaw;
     tableData.push(patient);
