@@ -94,7 +94,7 @@ const SearchForm = props => {
           <Form.Item name={`exactMatch`} valuePropName="checked" style={{ marginBottom: 0 }}>
             <Checkbox checked>
               <Tooltip
-                placement={context.isMobile ? "bottom" : "right"}
+                placement={context.isMobile ? "top" : "right"}
                 title="Match the exact content from the search query"
               >
                 Exact Match

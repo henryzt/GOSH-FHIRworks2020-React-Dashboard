@@ -28,9 +28,18 @@ class SearchPage extends React.Component {
       });
       return;
     }
-    this.setState({
-      searchContent: query
-    });
+    if (query.anythingElse) {
+      message.loading(
+        "You have entered the query to search for everything, this might take a while and your browser might freeze, please wait for the browser to respond."
+      );
+      setTimeout(() => {
+        this.setState({ searchContent: query });
+      }, 1000);
+    } else {
+      this.setState({
+        searchContent: query
+      });
+    }
   };
 
   render() {
