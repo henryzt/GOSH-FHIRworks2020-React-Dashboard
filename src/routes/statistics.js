@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
-import { Result, Button, Row, Col, Card, message } from "antd";
+import { Result, Button, Row, Col, Card, message, Skeleton } from "antd";
 
 import { Doughnut, Bar, Pie, Polar, HorizontalBar } from "react-chartjs-2";
 
@@ -230,7 +230,7 @@ class StatisticsPage extends React.Component {
     return (
       <div>
         <Header title="Statistics"></Header>
-        {this.state.patients && (
+        {this.state.patients ? (
           <div>
             <Row style={{ padding: "40px" }}>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
@@ -255,6 +255,14 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.BirthMonthChart()} title="Birth Month"></DisplayCard>
               </Col>
             </Row>
+          </div>
+        ) : (
+          <div style={{ padding: "40px" }}>
+            <Skeleton active />
+            <Skeleton active />
+            <Skeleton active />
+            <Skeleton active />
+            <Skeleton active />
           </div>
         )}
       </div>
