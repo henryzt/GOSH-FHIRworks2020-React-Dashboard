@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card } from "antd";
+import { GlobalContext } from "../components/GlobalContext";
 
 class PatientCard extends Component {
   constructor(props) {
@@ -8,6 +9,8 @@ class PatientCard extends Component {
       value: null
     };
   }
+
+  static contextType = GlobalContext;
 
   render() {
     const { patientData, loading } = this.props;
@@ -23,7 +26,7 @@ class PatientCard extends Component {
             View Detail
           </a>
         }
-        style={{ width: "auto", margin: "5px" }}
+        style={{ width: this.context.isMobile ? "100%" : "auto", margin: "5px" }}
         loading={loading}
         hoverable
       >

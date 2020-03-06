@@ -34,7 +34,7 @@ const bgColors = [
   "#00a8cc",
   "#00a8cc"
 ];
-const bgColorsHover = "#FF6384";
+const bgColorsHover = "#f5e942";
 
 const DisplayCard = ({ children, title }) => {
   return (

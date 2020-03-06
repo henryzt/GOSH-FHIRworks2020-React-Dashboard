@@ -116,7 +116,7 @@ class App extends React.Component {
 
   confirmLogout = () => {
     Modal.success({
-      title: "You are successfully logged out",
+      title: "You have successfully logged out",
       content: "You will be logged out of a real system, but not in this demo prototype."
     });
   };
@@ -145,11 +145,7 @@ class App extends React.Component {
 
           <Layout className="site-layout">
             <Header
-              className="site-layout-background"
-              style={{
-                padding: 0,
-                boxShadow: "0px 6px 20px -10px rgba(0,0,0,0.05)",
-                zIndex: 20
+              className="site-layout-header"
               }}
             >
               <h2 style={{ paddingLeft: 20 + "px" }}>

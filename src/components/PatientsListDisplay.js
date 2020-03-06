@@ -83,12 +83,10 @@ class PatientsListDisplay extends React.Component {
       );
       layout = cardLayout;
     } else {
-      let random = Math.random();
       // ---------------------------- Table view
       const tableLayout = (
         <PatientTable
           loading={this.props.loading}
-          date={random}
           patientData={patients}
           viewPatient={patient => {
             console.log(patient);
