@@ -12,9 +12,7 @@ class PatientTable extends Component {
   }
 
   updatePatients = () => {
-    console.log("AAAAAAAAAAAA");
     if (this.props.patientData != null && this.props.patientData[0] != null) {
-      console.log("BBBBB");
       this.setState({
         tableData: this.updatePatientArray(this.props.patientData)
       });
@@ -22,16 +20,11 @@ class PatientTable extends Component {
   };
 
   componentDidUpdate = lastProp => {
-    console.log(lastProp, this.props, this.state);
+    // console.log(lastProp, this.props, this.state);
     if (lastProp != this.props) this.updatePatients();
   };
 
-  componentWillUnmount = () => {
-    console.log("UNMOUNT", this.props);
-  };
-
   componentDidMount = prop => {
-    console.log("MOUNT", this.props, prop);
     this.updatePatients();
   };
 
