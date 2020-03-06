@@ -52,7 +52,7 @@ class PatientTable extends Component {
         dataIndex: "name",
         key: "name",
         ellipsis: true,
-        width: 195,
+        width: 180,
         sorter: (a, b) => a.name.localeCompare(b.name),
         fixed: "left"
       },

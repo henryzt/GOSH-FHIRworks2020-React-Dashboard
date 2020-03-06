@@ -82,7 +82,7 @@ const routes = [
   },
   {
     path: "/patients",
-    title: () => "Patients List",
+    title: () => "Patients",
     main: () => <PatientPage />
   },
   {
@@ -241,7 +241,35 @@ const RouterContent = () => {
 const FhirFooter = () => {
   return (
     <Footer style={{ textAlign: "center" }} className="footer">
-      FHIR Dashboard ©2020 Created by henryz00
+      FHIR Dashboard ©2020 Created by <a href="https://github.com/henryz00">henryz00</a>
+      <div style={{ opacity: 0.5 }}>
+        Using{" "}
+        <a href="https://www.hl7.org/fhir/" style={{ color: "black" }}>
+          HL7 FHIR
+        </a>{" "}
+        Standards,{" "}
+        <a href="https://cs.ucl.ac.uk" style={{ color: "black" }}>
+          UCL CS
+        </a>{" "}
+        <a
+          href="https://github.com/henryz00/GOSH-FHIRworks2020-React-Dashboard"
+          style={{ color: "black" }}
+        >
+          COMP0016 Project
+        </a>{" "}
+        for GOSH DRIVE and NHS England
+        <div>
+          <a
+            onClick={() => {
+              window.$globalPatients = null;
+              localStorage.removeItem("patients");
+              message.success("Local data cache cleared");
+            }}
+          >
+            Click here to clear local FHIR data cache
+          </a>
+        </div>
+      </div>
     </Footer>
   );
 };

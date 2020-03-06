@@ -67,7 +67,7 @@ function getPatientList(message) {
       json = window.$globalPatients;
     } else {
       // start load api, show loading
-      const hideLoading = message.loading("Fetching patient data..", 0);
+      const hideLoading = message.loading("Please wait, fetching patient data...", 0);
       try {
         json = await request();
         message.success({ content: "Patient data loaded!", duration: 2 });

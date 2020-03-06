@@ -19,7 +19,7 @@ class TabBarMenu extends React.Component {
     console.log(location, history);
 
     return (
-      <div style={{ position: "fixed", width: "100%", bottom: 0, zIndex: 10000 }}>
+      <div style={{ position: "fixed", width: "100%", bottom: 0, zIndex: 900 }}>
         <TabBar unselectedTintColor="#949494" tintColor="#33A3F4" barTintColor="white">
           <TabBar.Item
             title="Home"
