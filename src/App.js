@@ -222,7 +222,11 @@ const RouterContent = () => {
 };
 
 const FhirFooter = () => {
-  return <Footer style={{ textAlign: "center" }}>FHIR Dashboard ©2020 Created by henryz00</Footer>;
+  return (
+    <Footer style={{ textAlign: "center" }} className="footer">
+      FHIR Dashboard ©2020 Created by henryz00
+    </Footer>
+  );
 };
 
 export default App;

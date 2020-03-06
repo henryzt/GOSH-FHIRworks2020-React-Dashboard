@@ -57,6 +57,30 @@
   transition: opacity 300ms, transform 300ms;
 }
 
+@media (max-width: 575px) {
+  .page-enter {
+    transform: none;
+  }
+
+  .page-enter-active {
+    transform: none;
+  }
+
+  .page-exit {
+    transform: none;
+  }
+
+  .page-exit-active {
+    transform: none;
+  }
+
+  .footer {
+    margin-bottom: 50px;
+  }
+}
+
+/* ----- */
+
 .ant-descriptions-title {
   margin-top: 20px;
 }
