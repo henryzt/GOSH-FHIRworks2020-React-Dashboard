@@ -101,3 +101,24 @@
 }
 
 /* ----- */
+
+.overlay {
+  z-index: 999;
+  background: black;
+  opacity: 0.3;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.statPadding {
+  padding: 40px;
+}
+
+@media (max-width: 575px) {
+  .statPadding {
+    padding: 10px;
+  }
+}

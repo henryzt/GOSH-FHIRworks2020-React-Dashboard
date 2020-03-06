@@ -1,25 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
+import Overlay from "../components/Overlay";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
 import { Result, Button, Row, Col, Card, message, Skeleton } from "antd";
 
 import { Doughnut, Bar, Pie, Polar, HorizontalBar } from "react-chartjs-2";
 
-// const bgColors = [
-//   "#0d7a44",
-//   "#089db6",
-//   "#063c45",
-//   "#0f021b",
-//   "#0bc1e3",
-//   "#0ced5c",
-//   "#058de7",
-//   "#0de989",
-//   "#0d3a0c",
-//   "#03c9d9",
-//   "#0b9d7c",
-//   "#01310d",
-//   "#013040"
-// ];
 // const bgColors = [
 //     "#FF6384",
 //     "#36A2EB",
@@ -154,11 +140,11 @@ class StatisticsPage extends React.Component {
       ]
     };
     console.log(occ);
-    return <Polar data={data} />;
+    return <Pie data={data} />;
   };
 
   LanguageChart = () => {
-    const occ = findTop(findOccurence(this.state.patients, "language"), 10, true);
+    const occ = findTop(findOccurence(this.state.patients, "language"), 5, true);
     console.log(occ);
     const data = {
       labels: Object.keys(occ),
@@ -201,7 +187,8 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColorsHover,
+          label: "Number of people"
         }
       ]
     };
@@ -218,7 +205,8 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColorsHover,
+          label: "Number of people"
         }
       ]
     };
@@ -229,21 +217,22 @@ class StatisticsPage extends React.Component {
   render() {
     return (
       <div>
+        <Overlay show={!this.state.patients}></Overlay>
         <Header title="Statistics"></Header>
         {this.state.patients ? (
           <div>
-            <Row style={{ padding: "40px" }}>
+            <Row className="statPadding">
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={this.GenderChart()} title="Gender"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
-              </Col>
-              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={this.LanguageChart()} title="Languages"></DisplayCard>
-              </Col>
-              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={this.AgeChart()} title="Age Groups"></DisplayCard>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                <DisplayCard children={this.LanguageChart()} title="Top 5 Languages"></DisplayCard>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard
@@ -257,7 +246,7 @@ class StatisticsPage extends React.Component {
             </Row>
           </div>
         ) : (
-          <div style={{ padding: "40px" }}>
+          <div className="statPadding">
             <Skeleton active />
             <Skeleton active />
             <Skeleton active />

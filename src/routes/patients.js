@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PatientsListDisplay from "../components/PatientsListDisplay";
 import { getPatientList } from "../javascript/api";
 import Header from "../components/Header";
+import Overlay from "../components/Overlay";
 import { message } from "antd";
 
 const moment = require("moment");
@@ -37,6 +38,7 @@ class PatientsPage extends React.Component {
     }
     return (
       <div>
+        <Overlay show={this.state.awaitingData}></Overlay>
         {!this.props.filter && <Header title="Patients List"></Header>}
         <PatientsListDisplay patients={patientData} loading={this.state.awaitingData} />
       </div>
