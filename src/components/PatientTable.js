@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Table, Skeleton } from "antd";
-
-const moment = require("moment");
+import { parseAllPatientData } from "../javascript/api";
 
 class PatientTable extends Component {
   constructor(props) {
@@ -29,29 +28,7 @@ class PatientTable extends Component {
   };
 
   updatePatientArray = patients => {
-    console.log("!!!", patients);
-    const tableData = [];
-    patients.forEach(elementRaw => {
-      if (!elementRaw) {
-        return null;
-      }
-      let element = elementRaw.resource;
-      let patient = new Object();
-      patient.name = element.name?.[0]?.family + " " + element.name?.[0]?.given?.[0];
-      patient.id = element.id;
-      patient.phone = element.telecom?.[0]?.value;
-      patient.language = element.communication?.[0]?.language?.text;
-      patient.maritalStatus = element.maritalStatus?.text;
-      patient.address = element.address?.[0]?.line[0];
-      patient.country = element.address?.[0]?.country;
-      patient.gender = element.gender;
-      patient.birthDate = element.birthDate;
-      patient.age = moment().diff(element.birthDate, "years");
-      patient.raw = elementRaw;
-      tableData.push(patient);
-    });
-
-    return tableData;
+    return parseAllPatientData(patients);
   };
 
   render() {

@@ -17,7 +17,7 @@ import { CaretDownOutlined, UnorderedListOutlined, AppstoreOutlined } from "@ant
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Avatar, Popconfirm, Radio, Tooltip } from "antd";
+import { Layout, Avatar, Popconfirm, Radio, Tooltip, Modal } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -102,7 +102,12 @@ class App extends React.Component {
     setViewInCard(value == "card");
   };
 
-  confirmLogout = () => {};
+  confirmLogout = () => {
+    Modal.success({
+      title: "You are successfully logged out",
+      content: "You will be logged out of a real system, but not in this demo prototype."
+    });
+  };
 
   render() {
     console.log(this.props);
