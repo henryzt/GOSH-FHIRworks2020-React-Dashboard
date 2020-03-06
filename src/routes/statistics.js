@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
 import { Result, Button, Row, Col, Card, message } from "antd";
 
-import { Doughnut, Bar } from "react-chartjs-2";
+import { Doughnut, Bar, Pie } from "react-chartjs-2";
 
 const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
 const bgColorsHover = ["#FF6384", "#36A2EB", "#FFCE56"];
@@ -25,22 +25,24 @@ const findOccurence = (data, key) => {
   return occ;
 };
 
-const findTop = (data, topNum) => {
+const findTop = (data, topNum, displayOther) => {
   const findSumFuc = (total, num) => {
     return total + num;
   };
-  console.log(data);
   const sum = Object.values(data).reduce(findSumFuc);
-  const keysSorted = Object.keys(data).sort((a, b) => {
+  // inspired by https://stackoverflow.com/questions/1069666/sorting-object-property-by-values
+  let keysSorted = Object.keys(data).sort((a, b) => {
     return data[b] - data[a];
   });
-  console.log(keysSorted);
-  let topData = keysSorted.slice(0, topNum).map(key => {
-    return { [keysSorted[key]]: data[key] };
+  keysSorted = keysSorted.slice(0, topNum);
+  let topData = {};
+  keysSorted.forEach(element => {
+    topData[element] = data[element];
   });
-  const rest = sum - Object.values(topData).reduce(findSumFuc);
-  topData.other = rest;
-  console.log(topData);
+  if (displayOther) {
+    const rest = sum - Object.values(topData).reduce(findSumFuc);
+    topData.other = rest;
+  }
   return topData;
 };
 
@@ -78,8 +80,8 @@ class StatisticsPage extends React.Component {
     return <Doughnut data={data} />;
   };
 
-  StateChart = () => {
-    const occ = findTop(findOccurence(this.state.patients, "city"), 5);
+  CityChart = () => {
+    const occ = findTop(findOccurence(this.state.patients, "city"), 10);
     console.log(occ);
     const data = {
       labels: Object.keys(occ),
@@ -87,12 +89,13 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColorsHover
+          hoverBackgroundColor: bgColorsHover,
+          label: "City"
         }
       ]
     };
     console.log(occ);
-    return <Bar data={data} />;
+    return <Pie data={data} />;
   };
 
   render() {
@@ -106,7 +109,7 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.GenderChart()} title="Gender"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={this.StateChart()}></DisplayCard>
+                <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={<div>language</div>}></DisplayCard>
