@@ -1,8 +1,31 @@
 # FHIR Responsive React Dashboard
 
+## About
+
+This project is built for COMP0016 FHIRworks Hackathon (FHIRworks open source packages for GOSH DRIVE and NHS England). The app provides an easy to use, responsive web and mobile dashboard interfaces for users to view, search and analyse FHIR datasets.
+
+
+![img](screenshots/screenshot.png)
+
+[Run the app on github pages](https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard/) (Dynamic data won't load, local demo data will be used)
+
+This web app is built using:
+
+- [React.js](https://reactjs.org/) + [React Router](https://reacttraining.com/react-router/)
+- [Ant Design](https://ant.design/)
+- [HL7 FHIR Standard](https://www.hl7.org/fhir/)
+- [Chart.js React](https://github.com/jerairrest/react-chartjs-2)
+
+
+The theme of the project is `6. Responsive design app form pulling data from a series of FHIR records e.g. retrieving and flattening the data, from a front-end design`, however, it is also combined with `2. Graphing data` and `10. Searching`.
+
+
+
 ## Screenshots
 
 ### Overview
+The dashboard prototype came with three main sections (Patient list viewer, Advanced Search, Statistics), utilising FHIR data strcuture and standards. The web app is fully responsive, with a separate mobile tab menu for native mobile app experience.
+
 ![img](screenshots/demo.gif)
 
 ### FHIR Data Viewer (With Raw Json viewer)
