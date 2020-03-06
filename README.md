@@ -1,4 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FHIR Responsive React Dashboard
+
+## Screenshots
+
+### Overview
+![img](screenshots/demo.gif)
+
+### FHIR Data Viewer (With Raw Json viewer)
+The patient list can be viewed by a choice of table or card layout. In the table layout, the user can easily sort the entire database by clicking the table head, and view full patient observation in a popup drawer. 
+
+For each observation entry, more advanced user can even view the raw FHIR json for more detailed info.
+
+![img](screenshots/list.gif)
+
+### Search
+Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite difficult to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be acheived.
+
+![img](screenshots/search.gif)
+
+### Statistics
+Although this is not required in project (No.6) description, I would love to learn and utilizing chart.js with React to visiualize dataset like FHIR. A filter and restructure function has been written to manipulate the raw FHIR data and making it easier to be analyzied in the app.
+
+![img](screenshots/stats.gif)
+
+### Responsive Design
+The web app is fully responsive, down to every smaller detail. This is quite hard, as the ant design library doesn't came with responsive design. In addition, I have chosen a separate menu component for mobile and desktop (bottom tabbar and side menu), which will be enabled and disabled programmatically. By doing this, it will also make the process to migrate the app to a React native app much easier, which can be installed on native smart phone and tablets.
+
+![img](screenshots/responsive1.gif)
+
+![img](screenshots/responsive2.gif)
+
+![img](screenshots/responsive3.gif)
+
+### Other Details
+
+![img](screenshots/details.gif)
+
 
 ## Available Scripts
 
@@ -12,10 +48,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -27,42 +59,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
