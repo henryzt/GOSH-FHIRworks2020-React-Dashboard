@@ -31,69 +31,79 @@ class PatientsListDisplay extends React.Component {
   render() {
     let patients = this.props.patients ? this.props.patients : this.state.patientsDummy;
 
-    let startIdx = this.state.page * this.state.itemPerPage;
+    let layout;
 
-    let pagination = (
-      <Pagination
-        style={{ textAlign: "center" }}
-        disabled={this.props.loading}
-        defaultCurrent={1}
-        defaultPageSize={this.state.itemPerPage}
-        current={this.state.page + 1}
-        total={patients && patients.length > 1 ? patients.length : 0}
-        onChange={page => {
-          this.setState({
-            page: page - 1
-          });
-        }}
-      />
-    );
+    if (this.context.viewInCard) {
+      let startIdx = this.state.page * this.state.itemPerPage;
 
-    let keyCounter = 0;
+      let pagination = (
+        <Pagination
+          style={{ textAlign: "center" }}
+          disabled={this.props.loading}
+          defaultCurrent={1}
+          defaultPageSize={this.state.itemPerPage}
+          current={this.state.page + 1}
+          total={patients && patients.length > 1 ? patients.length : 0}
+          onChange={page => {
+            this.setState({
+              page: page - 1
+            });
+          }}
+        />
+      );
 
-    // -------------------- card view
-    let cardListItems = patients.slice(startIdx, startIdx + this.state.itemPerPage).map(patient => (
-      <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
-        <PatientCard
-          patientData={patient && patient.resource}
+      let keyCounter = 0;
+
+      // -------------------- card view
+      let cardListItems = patients
+        .slice(startIdx, startIdx + this.state.itemPerPage)
+        .map(patient => (
+          <Col xs={23} sm={23} md={12} lg={8} style={{ padding: "10px" }} key={keyCounter++}>
+            <PatientCard
+              patientData={patient && patient.resource}
+              loading={this.props.loading}
+              viewPatient={() => {
+                this.viewPatientDrawer(patient);
+              }}
+            ></PatientCard>
+          </Col>
+        ));
+
+      const cardLayout = (
+        <div>
+          <Content
+            style={{
+              margin: "0px 16px"
+            }}
+          >
+            <Row>{cardListItems}</Row>
+          </Content>
+          {pagination}
+        </div>
+      );
+      layout = cardLayout;
+    } else {
+      console.log("aaaaaaaa");
+      let random = Math.random();
+      // ---------------------------- Table view
+      const tableLayout = (
+        <PatientTable
           loading={this.props.loading}
-          viewPatient={() => {
+          date={random}
+          patientData={patients}
+          viewPatient={patient => {
+            console.log(patient);
             this.viewPatientDrawer(patient);
           }}
-        ></PatientCard>
-      </Col>
-    ));
-
-    const cardLayout = (
-      <div>
-        <Content
-          style={{
-            margin: "0px 16px"
-          }}
-        >
-          <Row>{cardListItems}</Row>
-        </Content>
-        {pagination}
-      </div>
-    );
-
-    // ---------------------------- Table view
-    const tableLayout = (
-      <PatientTable
-        loading={this.props.loading}
-        patientData={patients}
-        viewPatient={patient => {
-          console.log(patient);
-          this.viewPatientDrawer(patient);
-        }}
-      ></PatientTable>
-    );
-
+        ></PatientTable>
+      );
+      layout = tableLayout;
+    }
     return (
       <div>
         {patients.length > 0 ? (
           <div>
-            {this.context.viewInCard ? cardLayout : tableLayout}
+            {layout}
 
             <ObservationDrawer
               patient={this.state.currentSelectedPatient}
