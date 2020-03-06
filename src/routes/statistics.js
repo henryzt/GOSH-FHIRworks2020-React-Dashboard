@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
 import { Result, Button, Row, Col, Card, message } from "antd";
 
-import { Doughnut, Bar, Pie } from "react-chartjs-2";
+import { Doughnut, Bar, Pie, Polar } from "react-chartjs-2";
 
 const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
 const bgColorsHover = ["#FF6384", "#36A2EB", "#FFCE56"];
@@ -25,7 +25,7 @@ const findOccurence = (data, key) => {
   return occ;
 };
 
-const findTop = (data, topNum, displayOther) => {
+const findTop = (data, topNum, displayOther, shuffle) => {
   const findSumFuc = (total, num) => {
     return total + num;
   };
@@ -35,6 +35,13 @@ const findTop = (data, topNum, displayOther) => {
     return data[b] - data[a];
   });
   keysSorted = keysSorted.slice(0, topNum);
+  if (shuffle) {
+    console.log(keysSorted);
+    keysSorted = keysSorted.sort(function(a, b) {
+      return 0.5 - Math.random();
+    });
+    console.log(keysSorted);
+  }
   let topData = {};
   keysSorted.forEach(element => {
     topData[element] = data[element];
@@ -81,7 +88,25 @@ class StatisticsPage extends React.Component {
   };
 
   CityChart = () => {
-    const occ = findTop(findOccurence(this.state.patients, "city"), 10);
+    const occ = findTop(findOccurence(this.state.patients, "city"), 5, false, true);
+    console.log(occ);
+    const data = {
+      labels: Object.keys(occ),
+      datasets: [
+        {
+          data: Object.values(occ),
+          backgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover,
+          label: "City"
+        }
+      ]
+    };
+    console.log(occ);
+    return <Polar data={data} />;
+  };
+
+  LanguageChart = () => {
+    const occ = findTop(findOccurence(this.state.patients, "language"), 10, true);
     console.log(occ);
     const data = {
       labels: Object.keys(occ),
@@ -112,7 +137,7 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.CityChart()} title="Top 5 Cities"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={<div>language</div>}></DisplayCard>
+                <DisplayCard children={this.LanguageChart()} title="Languages"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={<div>age</div>}></DisplayCard>
