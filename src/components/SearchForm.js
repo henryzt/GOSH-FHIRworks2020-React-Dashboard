@@ -91,10 +91,10 @@ const SearchForm = props => {
             textAlign: context.isMobile ? "center" : "left"
           }}
         >
-          <Form.Item name={`blurredSearch`} valuePropName="checked" style={{ marginBottom: 0 }}>
+          <Form.Item name={`exactMatch`} valuePropName="checked" style={{ marginBottom: 0 }}>
             <Checkbox checked>
-              <Tooltip placement="right" title="Weakly match any content close to the search query">
-                Blurred Match
+              <Tooltip placement="right" title="Match the exact content from the search query">
+                Exact Match
               </Tooltip>
             </Checkbox>
           </Form.Item>

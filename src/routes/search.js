@@ -17,9 +17,9 @@ class SearchPage extends React.Component {
 
   searchPatient = query => {
     console.log("received search request: ", query);
-    //check if all the field is empty except blurred search checkbox
+    //check if all the field is empty except exact macth search checkbox
     let queryClone = Object.assign({}, query);
-    delete queryClone.blurredSearch;
+    delete queryClone.exactMatch;
     const isEmpty = Object.values(queryClone).every(x => x === undefined || x === null || x === "");
     if (isEmpty) {
       Modal.warning({

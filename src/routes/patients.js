@@ -40,11 +40,11 @@ class PatientsPage extends React.Component {
   }
 }
 
-function recursiveFind(obj, value, blurred) {
+function recursiveFind(obj, value, exact) {
   let json = JSON.stringify(obj);
-  const regex = blurred
-    ? new RegExp(".*" + value.toLowerCase() + ".*", "g")
-    : new RegExp('"' + value.toLowerCase() + '"', "g");
+  const regex = exact
+    ? new RegExp('"' + value.toLowerCase() + '"', "g")
+    : new RegExp(".*" + value.toLowerCase() + ".*", "g");
   return json.toLowerCase().search(regex) !== -1;
 }
 
@@ -54,7 +54,7 @@ function doFilter(patients, filter) {
     let data = patient.resource;
     let match = [];
     if (filter.name) {
-      match.push(recursiveFind(data.name, filter.name, filter.blurredSearch));
+      match.push(recursiveFind(data.name, filter.name, filter.exactMatch));
     }
     if (filter.birthdate) {
       let isWithIn =
@@ -66,19 +66,19 @@ function doFilter(patients, filter) {
       match.push(data.gender == filter.gender);
     }
     if (filter.phone) {
-      match.push(recursiveFind(data.telecom, filter.phone, filter.blurredSearch));
+      match.push(recursiveFind(data.telecom, filter.phone, filter.exactMatch));
     }
     if (filter.address) {
-      match.push(recursiveFind(data.address, filter.address, filter.blurredSearch));
+      match.push(recursiveFind(data.address, filter.address, filter.exactMatch));
     }
     if (filter.maritalStatus) {
-      match.push(recursiveFind(data.maritalStatus, filter.maritalStatus, filter.blurredSearch));
+      match.push(recursiveFind(data.maritalStatus, filter.maritalStatus, filter.exactMatch));
     }
     if (filter.id) {
-      match.push(recursiveFind(data.id, filter.id, filter.blurredSearch));
+      match.push(recursiveFind(data.id, filter.id, filter.exactMatch));
     }
     if (filter.anythingElse) {
-      match.push(recursiveFind(data, filter.anythingElse, filter.blurredSearch));
+      match.push(recursiveFind(data, filter.anythingElse, filter.exactMatch));
     }
 
     // result
