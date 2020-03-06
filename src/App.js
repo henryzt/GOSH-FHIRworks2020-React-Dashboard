@@ -3,6 +3,7 @@ import "./App.css";
 import "antd/dist/antd.css";
 import PatientPage from "./routes/patients";
 import SearchPage from "./routes/search";
+import StatisticsPage from "./routes/statistics";
 import NotFoundPage from "./routes/NotFoundPage";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
@@ -17,7 +18,7 @@ import { CaretDownOutlined, UnorderedListOutlined, AppstoreOutlined } from "@ant
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Avatar, Popconfirm, Radio, Tooltip, Modal } from "antd";
+import { Layout, Avatar, Popconfirm, Radio, Tooltip, Modal, message } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -34,6 +35,12 @@ class DesktopMenu extends React.Component {
       collapsed: collapsed
     });
   };
+
+  componentDidMount() {
+    message.config({
+      top: 80
+    });
+  }
 
   render() {
     return (
@@ -82,6 +89,11 @@ const routes = [
     path: "/search",
     title: () => "Search",
     main: () => <SearchPage />
+  },
+  {
+    path: "/statistics",
+    title: () => "Statistics",
+    main: () => <StatisticsPage />
   },
   {
     title: () => "404 Not Found",

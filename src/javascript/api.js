@@ -60,6 +60,31 @@ function request() {
   });
 }
 
+function getPatientList(message) {
+  return new Promise(async resolve => {
+    let json = null;
+    if (window.$globalPatients) {
+      json = window.$globalPatients;
+    } else {
+      // start load api, show loading
+      const hideLoading = message.loading("Fetching patient data..", 0);
+      try {
+        json = await request();
+        message.success({ content: "Patient data loaded!", duration: 2 });
+      } catch (e) {
+        json = getPatientDemo();
+        message.warn({
+          content: "Network Error, the server might be down. Local demo data is loaded.",
+          duration: 5
+        });
+      }
+      window.$globalPatients = json;
+      hideLoading();
+    }
+    resolve(json);
+  });
+}
+
 function parseAllPatientData(patients) {
   const tableData = [];
   patients.forEach(elementRaw => {
@@ -87,4 +112,11 @@ function parseAllPatientData(patients) {
   return tableData;
 }
 
-export { request, requestObservation, getPatientDemo, getObservationDemo, parseAllPatientData };
+export {
+  request,
+  requestObservation,
+  getPatientDemo,
+  getObservationDemo,
+  parseAllPatientData,
+  getPatientList
+};

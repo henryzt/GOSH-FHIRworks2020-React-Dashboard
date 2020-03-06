@@ -38,6 +38,7 @@ class SideMenu extends React.Component {
         <Menu.Item key="/statistics">
           <BarChartOutlined />
           <span>Statistics</span>
+          <NavLink to="/statistics" />
         </Menu.Item>
       </Menu>
     );

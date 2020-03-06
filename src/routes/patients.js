@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PatientsListDisplay from "../components/PatientsListDisplay";
-import { request, getPatientDemo } from "../javascript/api";
+import { getPatientList } from "../javascript/api";
 import Header from "../components/Header";
 import { message } from "antd";
 
@@ -17,28 +17,8 @@ class PatientsPage extends React.Component {
   }
 
   async componentDidMount() {
-    let json = null;
-    if (window.$globalPatients) {
-      json = window.$globalPatients;
-    } else {
-      message.config({
-        top: 80
-      });
-      // start load api, show loading
-      const hideLoading = message.loading("Fetching patient data..", 0);
-      try {
-        json = await request();
-        message.success({ content: "Patient data loaded!", duration: 2 });
-      } catch (e) {
-        json = getPatientDemo();
-        message.warn({
-          content: "Network Error, the server might be down. Local demo data is loaded.",
-          duration: 5
-        });
-      }
-      window.$globalPatients = json;
-      hideLoading();
-    }
+    let json = await getPatientList(message);
+
     this.setState({
       awaitingData: false,
       patients: json
@@ -46,10 +26,11 @@ class PatientsPage extends React.Component {
   }
 
   render() {
-    const patientData =
-      this.props.filter && this.state.patients
-        ? doFilter(this.state.patients, this.props.filter)
-        : this.state.patients;
+    let patientData = this.state.patients;
+    if (this.props.filter && this.state.patients) {
+      patientData = doFilter(this.state.patients, this.props.filter);
+      message.success({ content: `Found ${patientData.length} matching records`, duration: 3 });
+    }
     return (
       <div>
         {!this.props.filter && <Header title="Patients List"></Header>}
