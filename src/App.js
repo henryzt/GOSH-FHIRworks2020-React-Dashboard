@@ -11,7 +11,7 @@ import logo from "./img/fhir-logo-long.png";
 import icon from "./img/icon.png";
 import profile from "./img/profile.png";
 
-import { CaretDownOutlined } from "@ant-design/icons";
+import { CaretDownOutlined, UnorderedListOutlined, AppstoreOutlined } from "@ant-design/icons";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
@@ -156,8 +156,12 @@ class App extends React.Component {
                     }}
                     size="small"
                   >
-                    <Radio.Button value="table">Table</Radio.Button>
-                    <Radio.Button value="card">Card</Radio.Button>
+                    <Radio.Button value="table">
+                      <UnorderedListOutlined />
+                    </Radio.Button>
+                    <Radio.Button value="card">
+                      <AppstoreOutlined />
+                    </Radio.Button>
                   </Radio.Group>
                 </GlobalContextProvider>
                 <Popconfirm
