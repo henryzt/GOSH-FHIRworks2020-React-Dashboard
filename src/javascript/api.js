@@ -1,3 +1,14 @@
+let patientListDemo = require("./patientDemoData.json");
+let observationDemo = require("./observationDemoData.json");
+
+const getPatientDemo = () => {
+  return combinePatientsBundle(patientListDemo);
+};
+
+const getObservationDemo = () => {
+  return combinePatientsBundle(observationDemo);
+};
+
 function combinePatientsBundle(json) {
   let result = [];
   for (let bundle of json) {
@@ -16,7 +27,10 @@ function requestObservation(id) {
         json = combinePatientsBundle(json);
         resolve(json);
       })
-      .catch(console.log);
+      .catch(e => {
+        reject(e);
+        console.log(e);
+      });
   });
 }
 
@@ -36,9 +50,12 @@ function request() {
           localStorage.setItem("patients", JSON.stringify(json));
           resolve(json);
         })
-        .catch(console.log);
+        .catch(e => {
+          reject(e);
+          console.log(e);
+        });
     }
   });
 }
 
-export { request, requestObservation };
+export { request, requestObservation, getPatientDemo, getObservationDemo };

@@ -1,6 +1,6 @@
 import React from "react";
-import { requestObservation } from "../javascript/api";
-import { Drawer, Descriptions, Skeleton } from "antd";
+import { requestObservation, getObservationDemo } from "../javascript/api";
+import { Drawer, Descriptions, Skeleton, message } from "antd";
 import ReactJson from "react-json-view";
 
 import { GlobalContext } from "../components/GlobalContext";
@@ -35,7 +35,16 @@ class ObservationDrawer extends React.Component {
   //load observation
   async componentDidUpdate() {
     if (this.props.patient && !this.state.observation) {
-      let json = await requestObservation(this.props.patient.resource.id);
+      let json;
+      try {
+        json = await requestObservation(this.props.patient.resource.id);
+      } catch (e) {
+        json = getObservationDemo();
+        message.warn({
+          content: "Network Error, the server might be down. Local demo data is loaded.",
+          duration: 2
+        });
+      }
 
       this.setState({
         loading: false,

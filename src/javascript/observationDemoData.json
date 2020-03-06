@@ -1,0 +1,3671 @@
+[
+  {
+    "resourceType": "Bundle",
+    "id": "a110c4b31bc6d74ca4b5afa82918f92d",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.2366164+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG13cUFBQUFBQUFBQUE9PSNSVDoxI1RSQzoxMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFhQUN3QUFQd0FSM2JqbVBkaFFMdGdxNlVVSXBRbFFJd1dRUnNBSVFRQUlUZ09BQT09IiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/cffc1f61-5b02-4b60-b987-1ef87a35beda",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "cffc1f61-5b02-4b60-b987-1ef87a35beda",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.623+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 16.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/653381f1-475e-466c-b683-49bfed5718ae",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "653381f1-475e-466c-b683-49bfed5718ae",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.514+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 12.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/f282a870-2a75-48a8-8d8c-b75b69bace66",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "f282a870-2a75-48a8-8d8c-b75b69bace66",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.592+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 69.56,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/efe0039a-2400-4b46-8946-64dd87968c93",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "efe0039a-2400-4b46-8946-64dd87968c93",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.553+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a4ae2d6d-bd83-46f4-91e8-9ee33320e927",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a4ae2d6d-bd83-46f4-91e8-9ee33320e927",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.534+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 151.0,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a07086e2-be19-4334-a570-da57b76f8a27",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a07086e2-be19-4334-a570-da57b76f8a27",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.483+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 83.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 115.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/bac8f991-1de3-40af-aade-78ed0685c8f7",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "bac8f991-1de3-40af-aade-78ed0685c8f7",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.762+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 50.2,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/618848cc-5ea1-4b53-9ca6-dc02cda791f4",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "618848cc-5ea1-4b53-9ca6-dc02cda791f4",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.808+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/39773264-dc55-4fcf-8b1a-a9f5e8b1ca28",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "39773264-dc55-4fcf-8b1a-a9f5e8b1ca28",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.887+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 21.68,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/1d945974-37de-4aa1-aab4-f4d205225e43",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "1d945974-37de-4aa1-aab4-f4d205225e43",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.873+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 1.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "7f5503aab5face4ab68ee35bd03ab184",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.2612876+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14QkFBQUFBQUFBQUE9PSNSVDoyI1RSQzoyMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFXQUVvQWR1T1k5MkZBdTJDcnBSUWlsQ1ZBakJaQkd3QWhCQUFoT0E0QSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG13cUFBQUFBQUFBQUE9PSNSVDoxI1RSQzoxMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFhQUN3QUFQd0FSM2JqbVBkaFFMdGdxNlVVSXBRbFFJd1dRUnNBSVFRQUlUZ09BQT09IiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/22d1e5c2-bdfd-4c30-922c-dffdfe25a92b",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "22d1e5c2-bdfd-4c30-922c-dffdfe25a92b",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.934+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 82.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/3597172b-324c-4c39-8f3d-98b66a8939e5",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "3597172b-324c-4c39-8f3d-98b66a8939e5",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.951+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 12.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/10792a1c-2729-472b-807f-fba9c31b4f89",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "10792a1c-2729-472b-807f-fba9c31b4f89",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.951+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/26c0898d-7270-432d-b8a3-a75cb1d05791",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "26c0898d-7270-432d-b8a3-a75cb1d05791",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.874+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 52.8,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/e57b8444-a2e1-4e18-bcdc-38be66dfcfef",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "e57b8444-a2e1-4e18-bcdc-38be66dfcfef",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.903+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 69.159,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/bf71e554-7a0c-4063-a4ff-9ae2867d6bd7",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "bf71e554-7a0c-4063-a4ff-9ae2867d6bd7",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.982+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 156.7,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/b7449e2e-ec97-49ba-9084-1e4ad4c8f04b",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "b7449e2e-ec97-49ba-9084-1e4ad4c8f04b",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.592+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 46.4,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/b29d04cb-6309-4933-9174-b362de12e73b",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "b29d04cb-6309-4933-9174-b362de12e73b",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.496+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 93.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a128f598-67b8-42d2-9e0b-0d55ff4da5f7",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a128f598-67b8-42d2-9e0b-0d55ff4da5f7",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.797+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 68.597,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/b321fc4d-3f27-4678-b28b-31ea2e966298",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "b321fc4d-3f27-4678-b28b-31ea2e966298",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.012+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 22.21,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "3a647ed82e53b14e859680eb9976040c",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.2876751+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14VEFBQUFBQUFBQUE9PSNSVDozI1RSQzozMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFVQUZrQW1QZGhRTHRncTZVVUlwUWxRSXdXUVJzQUlRUUFJVGdPQUE9PSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14QkFBQUFBQUFBQUE9PSNSVDoyI1RSQzoyMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFXQUVvQWR1T1k5MkZBdTJDcnBSUWlsQ1ZBakJaQkd3QWhCQUFoT0E0QSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/48cd3080-b3fc-4bc7-a35e-d4b5c1f8b546",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "48cd3080-b3fc-4bc7-a35e-d4b5c1f8b546",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.042+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "4544-3",
+                "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+              }
+            ],
+            "text": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 35.457,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/964cf0e9-37b9-46d3-99a0-1e57e8ac33de",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "964cf0e9-37b9-46d3-99a0-1e57e8ac33de",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.873+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 156.0,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8f4a9511-3068-44fd-ba7c-841aaff80e94",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8f4a9511-3068-44fd-ba7c-841aaff80e94",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.764+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 154.6,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d0167a26-795d-4693-9918-6725afd80b3c",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d0167a26-795d-4693-9918-6725afd80b3c",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.09+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "21000-5",
+                "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+              }
+            ],
+            "text": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 40.177,
+            "unit": "fL",
+            "system": "http://unitsofmeasure.org",
+            "code": "fL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/9079ac34-9a8a-479a-ba33-f331e2491278",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "9079ac34-9a8a-479a-ba33-f331e2491278",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.075+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "777-3",
+                "display": "Platelets [#/volume] in Blood by Automated count"
+              }
+            ],
+            "text": "Platelets [#/volume] in Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 279.04,
+            "unit": "10*3/uL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10*3/uL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/e29307ba-7036-4249-a522-737a23646cfc",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "e29307ba-7036-4249-a522-737a23646cfc",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.012+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 77.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/1debe72b-ef13-463f-b7dd-81f02c1d23a4",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "1debe72b-ef13-463f-b7dd-81f02c1d23a4",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.122+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "32207-3",
+                "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+              }
+            ],
+            "text": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 248.5,
+            "unit": "fL",
+            "system": "http://unitsofmeasure.org",
+            "code": "fL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/36808795-2d5e-47bc-b31e-2ca509f9cce0",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "36808795-2d5e-47bc-b31e-2ca509f9cce0",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.068+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "32623-1",
+                "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+              }
+            ],
+            "text": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 11.514,
+            "unit": "fL",
+            "system": "http://unitsofmeasure.org",
+            "code": "fL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/fcf25470-f367-4713-9c3b-8f1e4f56e870",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "fcf25470-f367-4713-9c3b-8f1e4f56e870",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.122+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/28faf3cd-71e3-4ae5-ae15-337bded96083",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "28faf3cd-71e3-4ae5-ae15-337bded96083",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.168+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 1.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "579f30016bc181479c33ddab63707243",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.3129437+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14Z0FBQUFBQUFBQUE9PSNSVDo0I1RSQzo0MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFTQUdnQVlVQzdZS3VsRkNLVUpVQ01Ga0ViQUNFRUFDRTREZ0E9IiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14VEFBQUFBQUFBQUE9PSNSVDozI1RSQzozMCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFVQUZrQW1QZGhRTHRncTZVVUlwUWxRSXdXUVJzQUlRUUFJVGdPQUE9PSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/69ea03ba-100e-4acf-a08d-c3f74814f35a",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "69ea03ba-100e-4acf-a08d-c3f74814f35a",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.167+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 55.7,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a05fb6a1-cd42-40e5-ba73-f7006f51e026",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a05fb6a1-cd42-40e5-ba73-f7006f51e026",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.152+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 22.6,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/f0444502-5c1e-4fe1-8fe8-df25da94a636",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "f0444502-5c1e-4fe1-8fe8-df25da94a636",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.982+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 1.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d6f4c878-02e7-4682-899f-67a2737a75b4",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d6f4c878-02e7-4682-899f-67a2737a75b4",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.043+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "6690-2",
+                "display": "Leukocytes [#/volume] in Blood by Automated count"
+              }
+            ],
+            "text": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 6.4926,
+            "unit": "10*3/uL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10*3/uL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/dd44d8be-b680-4c72-92c1-ee0e4aa24a05",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "dd44d8be-b680-4c72-92c1-ee0e4aa24a05",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.199+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 15.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/b57ecb03-06ed-4b5b-b3bf-e73a23a99a0b",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "b57ecb03-06ed-4b5b-b3bf-e73a23a99a0b",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.075+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "787-2",
+                "display": "MCV [Entitic volume] by Automated count"
+              }
+            ],
+            "text": "MCV [Entitic volume] by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 91.873,
+            "unit": "fL",
+            "system": "http://unitsofmeasure.org",
+            "code": "fL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/6f23ccad-2679-426b-82cb-12c486d337e4",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "6f23ccad-2679-426b-82cb-12c486d337e4",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.592+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 20.37,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/7c635ec9-3de3-469f-a112-071df1a974a5",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "7c635ec9-3de3-469f-a112-071df1a974a5",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.314+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 144.7,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/96a4b653-414b-4bca-99b9-e4e68a376e2c",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "96a4b653-414b-4bca-99b9-e4e68a376e2c",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.486+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 42.3,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8e3d95da-e363-4b12-938c-c2d189f2882c",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8e3d95da-e363-4b12-938c-c2d189f2882c",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.013+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 69.001,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "a377a223babf5640b330b82f6d784032",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.3457335+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14OUFBQUFBQUFBQUE9PSNSVDo1I1RSQzo1MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFRQUhjQUFHQ3JwUlFpbENWQWpCWkJHd0FoQkFBaE9BNEEiLCJyYW5nZSI6eyJtaW4iOiIiLCJtYXgiOiJGRiJ9fQ%3D%3D"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14Z0FBQUFBQUFBQUE9PSNSVDo0I1RSQzo0MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFTQUdnQVlVQzdZS3VsRkNLVUpVQ01Ga0ViQUNFRUFDRTREZ0E9IiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/034979f1-2aae-4b20-98ac-d54963786f88",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "034979f1-2aae-4b20-98ac-d54963786f88",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.494+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 20.18,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d0ae0b4a-8400-4369-a84e-aa9e61d3da37",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d0ae0b4a-8400-4369-a84e-aa9e61d3da37",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.83+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 84.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 112.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/231f9b06-525a-4ba4-88d0-f36cd5ee4c26",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "231f9b06-525a-4ba4-88d0-f36cd5ee4c26",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.794+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 15.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/23d6a039-2467-4a6c-9aed-550082a938f1",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "23d6a039-2467-4a6c-9aed-550082a938f1",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.482+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 56.8,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/1f37228a-47ea-44a0-b5a9-bba163b07e93",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "1f37228a-47ea-44a0-b5a9-bba163b07e93",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.136+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 157.0,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/9d3ea5de-408b-4f63-8c2a-a332761af64b",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "9d3ea5de-408b-4f63-8c2a-a332761af64b",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.396+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 4.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/83c9f0c1-b4b4-4f64-95f6-9f87cc6aed86",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "83c9f0c1-b4b4-4f64-95f6-9f87cc6aed86",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.486+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 13.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/774d55f5-2113-4995-9dc9-93a1b5dfadf8",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "774d55f5-2113-4995-9dc9-93a1b5dfadf8",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.184+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 68.285,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a0395592-f683-41fe-8bbf-1a5408e363f8",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a0395592-f683-41fe-8bbf-1a5408e363f8",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.528+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8ec6a7f1-572b-43cf-b799-70d53601ce6f",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8ec6a7f1-572b-43cf-b799-70d53601ce6f",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.199+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 76.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "c3b1604d5ee783459a4783e1ca009c6d",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.3696186+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG15UEFBQUFBQUFBQUE9PSNSVDo2I1RSQzo2MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFPQUkrQUJjQVVJcFFsUUl3V1FSc0FJUVFBSVRnT0FBPT0iLCJyYW5nZSI6eyJtaW4iOiIiLCJtYXgiOiJGRiJ9fQ%3D%3D"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG14OUFBQUFBQUFBQUE9PSNSVDo1I1RSQzo1MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFRQUhjQUFHQ3JwUlFpbENWQWpCWkJHd0FoQkFBaE9BNEEiLCJyYW5nZSI6eyJtaW4iOiIiLCJtYXgiOiJGRiJ9fQ%3D%3D"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/3d313160-fcf4-4638-b3b6-d7aae9e31a74",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "3d313160-fcf4-4638-b3b6-d7aae9e31a74",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.479+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 95.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/7af59952-83d0-442a-9b71-ddef9ffd8956",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "7af59952-83d0-442a-9b71-ddef9ffd8956",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.589+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 2.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/cacc7e79-79b1-44b9-a442-f959a1340acd",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "cacc7e79-79b1-44b9-a442-f959a1340acd",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.013+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 78.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 104.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/80a738a9-e2b1-4058-9338-a72ffd808ff2",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "80a738a9-e2b1-4058-9338-a72ffd808ff2",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.559+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 23.4,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d4f3ca3f-14df-4e8e-b922-2cc36661c677",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d4f3ca3f-14df-4e8e-b922-2cc36661c677",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.59+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 92.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/6b135e44-660a-42fd-b707-975f42b29f9a",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "6b135e44-660a-42fd-b707-975f42b29f9a",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.075+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "786-4",
+                "display": "MCHC [Mass/volume] by Automated count"
+              }
+            ],
+            "text": "MCHC [Mass/volume] by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 34.263,
+            "unit": "g/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "g/dL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/edf940dc-38f8-4279-a342-86c6abed65bc",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "edf940dc-38f8-4279-a342-86c6abed65bc",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.026+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 54.5,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/f1f51bcf-554b-49a3-bc48-697fbbc5cda5",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "f1f51bcf-554b-49a3-bc48-697fbbc5cda5",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.59+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "29463-7", "display": "Body Weight" }
+            ],
+            "text": "Body Weight"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 57.9,
+            "unit": "kg",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8930056b-a7c8-4741-9a26-5a557c062817",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8930056b-a7c8-4741-9a26-5a557c062817",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.638+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 13.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/12041c85-e974-4d34-8cd0-a9c41517ba3f",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "12041c85-e974-4d34-8cd0-a9c41517ba3f",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.042+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "9279-1", "display": "Respiratory rate" }
+            ],
+            "text": "Respiratory rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 15.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "9b89813881efe846aa3d1fe862021a43",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.3940619+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG15dEFBQUFBQUFBQUE9PSNSVDo3I1RSQzo3MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFLQUsyQUE4QkFqQlpCR3dBaEJBQWhPQTRBIiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG15UEFBQUFBQUFBQUE9PSNSVDo2I1RSQzo2MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFPQUkrQUJjQVVJcFFsUUl3V1FSc0FJUVFBSVRnT0FBPT0iLCJyYW5nZSI6eyJtaW4iOiIiLCJtYXgiOiJGRiJ9fQ%3D%3D"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/98be38d7-a352-458a-9cc4-07236d5dd2c9",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "98be38d7-a352-458a-9cc4-07236d5dd2c9",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.186+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 82.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 130.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/7a8a474c-8555-4340-9a97-1571e40c43e4",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "7a8a474c-8555-4340-9a97-1571e40c43e4",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.337+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 74.527,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/da9f5005-4726-4bbd-8f38-7e676874e5f8",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "da9f5005-4726-4bbd-8f38-7e676874e5f8",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.48+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 68.093,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/31c11251-46e0-450c-b9ce-b0306fe12d13",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "31c11251-46e0-450c-b9ce-b0306fe12d13",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.796+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 69.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/a7cffdab-e514-4ae5-bb66-37f9ed8a070d",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a7cffdab-e514-4ae5-bb66-37f9ed8a070d",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.607+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59576-9",
+                "display": "Body mass index (BMI) [Percentile] Per age and gender"
+              }
+            ],
+            "text": "Body mass index (BMI) [Percentile] Per age and gender"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 69.059,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/3e7408d3-583f-44f6-bbac-43235edb5077",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "3e7408d3-583f-44f6-bbac-43235edb5077",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.605+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "Heart rate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 61.0,
+            "unit": "/min",
+            "system": "http://unitsofmeasure.org",
+            "code": "/min"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/ca123b6d-39a9-4866-a7f5-08085094332f",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "ca123b6d-39a9-4866-a7f5-08085094332f",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.903+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/375062d7-43e8-424d-86a2-d8e54b09e612" },
+          "effectiveDateTime": "2013-10-01T20:27:12+00:00",
+          "issued": "2013-10-01T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 78.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 123.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8518b495-3e2b-49df-8e0c-3be2b8ec8417",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8518b495-3e2b-49df-8e0c-3be2b8ec8417",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.594+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 4.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/8332eb26-0a40-469d-b8e5-6cbf37e7ecbd",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "8332eb26-0a40-469d-b8e5-6cbf37e7ecbd",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.608+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 82.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 122.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/b92df99d-6ca8-4f69-9415-1289a9e500fd",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "b92df99d-6ca8-4f69-9415-1289a9e500fd",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.48+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 22.97,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "917dc213d482464db1aff5e562863b17",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.4312761+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "next",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG16UUFBQUFBQUFBQUE9PSNSVDo4I1RSQzo4MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFFQU5FQUd3QWhCQUFoT0E0QSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      },
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG15dEFBQUFBQUFBQUE9PSNSVDo3I1RSQzo3MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFLQUsyQUE4QkFqQlpCR3dBaEJBQWhPQTRBIiwicmFuZ2UiOnsibWluIjoiIiwibWF4IjoiRkYifX0%3D"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/fa450ff8-7b1d-441d-8866-c7e2782a9354",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "fa450ff8-7b1d-441d-8866-c7e2782a9354",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.482+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 86.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 136.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/37ae15bc-e6cb-489f-8a92-2b42e3837f59",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "37ae15bc-e6cb-489f-8a92-2b42e3837f59",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.394+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/db2b545f-c242-4b6c-a873-bb7b149d8165" },
+          "effectiveDateTime": "2016-10-18T20:27:12+00:00",
+          "issued": "2016-10-18T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 157.2,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/99c0783b-4220-4743-a5ab-f449ffbdd6fb",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "99c0783b-4220-4743-a5ab-f449ffbdd6fb",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.075+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "785-6",
+                "display": "MCH [Entitic mass] by Automated count"
+              }
+            ],
+            "text": "MCH [Entitic mass] by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 27.219,
+            "unit": "pg",
+            "system": "http://unitsofmeasure.org",
+            "code": "pg"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/55d1012d-8bea-4204-b6cc-209fddd90f96",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "55d1012d-8bea-4204-b6cc-209fddd90f96",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.042+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "718-7",
+                "display": "Hemoglobin [Mass/volume] in Blood"
+              }
+            ],
+            "text": "Hemoglobin [Mass/volume] in Blood"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 15.283,
+            "unit": "g/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "g/dL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/6acac50c-48a8-4b9f-9259-41b3fe3b8226",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "6acac50c-48a8-4b9f-9259-41b3fe3b8226",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.032+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "laboratory",
+                  "display": "laboratory"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "789-8",
+                "display": "Erythrocytes [#/volume] in Blood by Automated count"
+              }
+            ],
+            "text": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/a7da99e6-8476-42b3-a11c-2f38772df267" },
+          "effectiveDateTime": "2014-10-07T20:27:12+00:00",
+          "issued": "2014-10-07T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 4.9199,
+            "unit": "10*6/uL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10*6/uL"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/dac68c82-259a-4e5f-b878-2ccb38873ff2",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "dac68c82-259a-4e5f-b878-2ccb38873ff2",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.558+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "8302-2", "display": "Body Height" }
+            ],
+            "text": "Body Height"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 157.3,
+            "unit": "cm",
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/e3913c34-bcd4-4177-93e6-5dc351c46f7e",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "e3913c34-bcd4-4177-93e6-5dc351c46f7e",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.607+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/ca9eebd7-5334-4df5-8c3c-8d9813dd4ae0" },
+          "effectiveDateTime": "2017-10-24T20:27:12+00:00",
+          "issued": "2017-10-24T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/9afc7d16-097d-4ee4-b234-941dbd260dae",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "9afc7d16-097d-4ee4-b234-941dbd260dae",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:17.184+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/701ba01a-9856-4154-941f-ae40c2075e89" },
+          "effectiveDateTime": "2015-10-13T20:27:12+00:00",
+          "issued": "2015-10-13T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/4a064229-2a40-45f4-a259-f4eedcfd525a",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "4a064229-2a40-45f4-a259-f4eedcfd525a",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.596+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "85354-9", "display": "Blood Pressure" }
+            ],
+            "text": "Blood Pressure"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic Blood Pressure"
+                  }
+                ],
+                "text": "Diastolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 76.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic Blood Pressure"
+                  }
+                ],
+                "text": "Systolic Blood Pressure"
+              },
+              "valueQuantity": {
+                "value": 118.0,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+              }
+            }
+          ]
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/4544d402-a570-44d4-aecb-bdb7df9a5598",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "4544d402-a570-44d4-aecb-bdb7df9a5598",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.319+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/87e3a745-e712-4467-8d99-0ab97f6f4455" },
+          "effectiveDateTime": "2010-09-14T20:27:12+00:00",
+          "issued": "2010-09-14T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 3.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "id": "bf10db60b974854791f146366d4d0f93",
+    "meta": { "lastUpdated": "2020-03-06T14:19:59.4541311+00:00" },
+    "type": "searchset",
+    "link": [
+      {
+        "relation": "self",
+        "url": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation?patient=8f789d0b-3145-4cf2-8504-13159edaa747&ct=eyJ0b2tlbiI6IitSSUQ6fmNxcDBBS2s1dG16UUFBQUFBQUFBQUE9PSNSVDo4I1RSQzo4MCNJU1Y6MiNJRU86NjU1NTEjUUNGOjEjRlBDOkFnRUFJUUFFQU5FQUd3QWhCQUFoT0E0QSIsInJhbmdlIjp7Im1pbiI6IiIsIm1heCI6IkZGIn19"
+      }
+    ],
+    "entry": [
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/58ebd2c8-0b10-41b7-9ec0-958040be4811",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "58ebd2c8-0b10-41b7-9ec0-958040be4811",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.794+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72514-3",
+                "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+              }
+            ],
+            "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 1.0,
+            "unit": "{score}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{score}"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/fcb28d3d-4297-45c0-ac17-64e32c86598d",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "fcb28d3d-4297-45c0-ac17-64e32c86598d",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.621+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "survey",
+                  "display": "survey"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status NHIS"
+              }
+            ],
+            "text": "Tobacco smoking status NHIS"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/04090f8c-076e-4af1-9582-98d8cae66764" },
+          "effectiveDateTime": "2011-09-20T20:27:12+00:00",
+          "issued": "2011-09-20T20:27:12.215+00:00",
+          "valueCodeableConcept": {
+            "coding": [
+              { "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoker" }
+            ],
+            "text": "Never smoker"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/40293fac-ff4f-4de4-9a43-03a7ccd0d847",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "40293fac-ff4f-4de4-9a43-03a7ccd0d847",
+          "meta": { "versionId": "4", "lastUpdated": "2020-02-11T15:07:16.796+00:00" },
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              { "system": "http://loinc.org", "code": "39156-5", "display": "Body Mass Index" }
+            ],
+            "text": "Body Mass Index"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "encounter": { "reference": "Encounter/6b432786-3b29-407e-ac06-c8b66b2a9683" },
+          "effectiveDateTime": "2012-09-25T20:27:12+00:00",
+          "issued": "2012-09-25T20:27:12.215+00:00",
+          "valueQuantity": {
+            "value": 21.0,
+            "unit": "kg/m2",
+            "system": "http://unitsofmeasure.org",
+            "code": "kg/m2"
+          }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d90ca447-6786-47c2-ba10-da7239173737",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d90ca447-6786-47c2-ba10-da7239173737",
+          "meta": { "versionId": "1", "lastUpdated": "2020-03-03T14:11:56.28+00:00" },
+          "status": "final",
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "heartrate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "effectivePeriod": {
+            "start": "2020-02-02T21:40:50.46012Z",
+            "end": "2020-02-02T21:40:50.46012Z"
+          },
+          "valueQuantity": { "value": 80.0, "unit": "BPM" }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/e0074dd8-2d28-4d15-b26e-8cbd282b01fb",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "e0074dd8-2d28-4d15-b26e-8cbd282b01fb",
+          "meta": { "versionId": "1", "lastUpdated": "2020-03-03T14:13:11.048+00:00" },
+          "status": "final",
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "heartrate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "effectivePeriod": {
+            "start": "2020-02-02T21:40:50.46012Z",
+            "end": "2020-02-02T21:40:50.46012Z"
+          },
+          "valueQuantity": { "value": 30.0, "unit": "BPM" }
+        },
+        "search": { "mode": "match" }
+      },
+      {
+        "fullUrl": "https://gosh-fhir-synth.azurehealthcareapis.com/Observation/d63e7c0d-6c78-484e-a1bd-c3f2524200e2",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "d63e7c0d-6c78-484e-a1bd-c3f2524200e2",
+          "meta": { "versionId": "1", "lastUpdated": "2020-03-03T14:14:51.445+00:00" },
+          "status": "final",
+          "code": {
+            "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }],
+            "text": "heartrate"
+          },
+          "subject": { "reference": "Patient/8f789d0b-3145-4cf2-8504-13159edaa747" },
+          "effectivePeriod": {
+            "start": "2020-02-02T21:40:50.46012Z",
+            "end": "2020-02-02T21:40:50.46012Z"
+          },
+          "valueQuantity": { "value": 20.0, "unit": "BPM" }
+        },
+        "search": { "mode": "match" }
+      }
+    ]
+  }
+]

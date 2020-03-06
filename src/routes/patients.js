@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PatientsListDisplay from "../components/PatientsListDisplay";
-import { request } from "../javascript/api";
+import { request, getPatientDemo } from "../javascript/api";
 import Header from "../components/Header";
 import { message } from "antd";
 
@@ -21,12 +21,23 @@ class PatientsPage extends React.Component {
     if (window.$globalPatients) {
       json = window.$globalPatients;
     } else {
+      message.config({
+        top: 80
+      });
       // start load api, show loading
       const hideLoading = message.loading("Fetching patient data..", 0);
-      json = await request();
+      try {
+        json = await request();
+        message.success({ content: "Patient data loaded!", duration: 2 });
+      } catch (e) {
+        json = getPatientDemo();
+        message.warn({
+          content: "Network Error, the server might be down. Local demo data is loaded.",
+          duration: 5
+        });
+      }
       window.$globalPatients = json;
       hideLoading();
-      message.success({ content: "Patient data loaded!", duration: 2 });
     }
     this.setState({
       awaitingData: false,
