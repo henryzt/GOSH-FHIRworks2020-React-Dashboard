@@ -16,7 +16,7 @@ import { CaretDownOutlined } from "@ant-design/icons";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Select, Avatar } from "antd";
+import { Layout, Select, Avatar, Popconfirm } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -97,6 +97,8 @@ class App extends React.Component {
     setViewInCard(value == "card");
   };
 
+  confirmLogout = () => {};
+
   render() {
     console.log(this.props);
 
@@ -147,8 +149,19 @@ class App extends React.Component {
                     <Select.Option value="card">View as Cards</Select.Option>
                   </Select>
                 </GlobalContextProvider>
-                <Avatar src={profile} style={{ marginLeft: "20px", marginRight: "5px" }} />
-                <CaretDownOutlined />
+                <Popconfirm
+                  placement="bottomRight"
+                  title="Would you like to logout of the system?"
+                  onConfirm={this.confirmLogout}
+                  okText="Logout"
+                  cancelText="Cancel"
+                >
+                  <Avatar
+                    src={profile}
+                    style={{ marginLeft: "20px", marginRight: !this.context.isMobile && "5px" }}
+                  />
+                  {!this.context.isMobile && <CaretDownOutlined />}
+                </Popconfirm>
               </div>
             </Header>
 
