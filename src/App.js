@@ -3,6 +3,7 @@ import "./App.css";
 import "antd/dist/antd.css";
 import PatientPage from "./routes/patients";
 import SearchPage from "./routes/search";
+import NotFoundPage from "./routes/NotFoundPage";
 import HomePage from "./routes/home";
 import SideMenu from "./components/SideMenu";
 import MobileTabBar from "./components/MobileTabBar";
@@ -81,6 +82,10 @@ const routes = [
     path: "/search",
     title: () => "Search",
     main: () => <SearchPage />
+  },
+  {
+    title: () => "404 Not Found",
+    main: () => <NotFoundPage />
   }
 ];
 
