@@ -13,7 +13,11 @@ class PatientTable extends Component {
 
   componentDidUpdate = lastProp => {
     console.log(lastProp, this.props, this.state);
-    if (lastProp != this.props) {
+    if (
+      lastProp != this.props &&
+      this.props.patientData != null &&
+      this.props.patientData[0] != null
+    ) {
       this.setState({
         tableData: this.updatePatientArray(this.props.patientData)
       });
@@ -21,6 +25,7 @@ class PatientTable extends Component {
   };
 
   updatePatientArray = patients => {
+    console.log("!!!", patients);
     const tableData = [];
     patients.forEach(elementRaw => {
       if (!elementRaw) {
@@ -164,6 +169,7 @@ class PatientTable extends Component {
         columns={columns}
         pagination={{ showSizeChanger: true }}
         dataSource={this.state.tableData}
+        rowKey="id"
       />
     );
   }

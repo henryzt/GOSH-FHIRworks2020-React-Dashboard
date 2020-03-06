@@ -90,7 +90,7 @@ class App extends React.Component {
 
   handleViewChange = value => {
     const { setViewInCard } = this.context;
-    console.log(setViewInCard, this.context);
+    // console.log(setViewInCard, this.context);
     setViewInCard(value == "card");
   };
 

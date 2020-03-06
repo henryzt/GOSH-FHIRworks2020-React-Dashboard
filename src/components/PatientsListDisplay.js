@@ -3,6 +3,7 @@ import PatientCard from "./PatientCard";
 import PatientTable from "./PatientTable";
 import ObservationDrawer from "./ObservationDrawer";
 import { Layout, Pagination, Row, Col, Result } from "antd";
+import { GlobalContext, GlobalContextProvider } from "../components/GlobalContext";
 
 const { Content } = Layout;
 
@@ -17,6 +18,8 @@ class PatientsListDisplay extends React.Component {
       currentSelectedPatient: null
     };
   }
+
+  static contextType = GlobalContext;
 
   viewPatientDrawer = patient => {
     this.setState({
@@ -90,7 +93,8 @@ class PatientsListDisplay extends React.Component {
       <div>
         {patients.length > 0 ? (
           <div>
-            {tableLayout}
+            {this.context.viewInCard ? cardLayout : tableLayout}
+
             <ObservationDrawer
               patient={this.state.currentSelectedPatient}
               visible={this.state.showDrawer}

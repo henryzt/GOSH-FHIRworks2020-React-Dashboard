@@ -5,7 +5,8 @@ export const GlobalContext = React.createContext({ isMobile: false });
 //ref https://juejin.im/post/5c87c1b4f265da2dc453b6d6
 export class GlobalContextProvider extends React.Component {
   state = {
-    isMobile: false
+    isMobile: false,
+    viewInCard: false
   };
 
   setViewInCard = viewInCard => {
