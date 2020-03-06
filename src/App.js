@@ -16,7 +16,7 @@ import { CaretDownOutlined, UnorderedListOutlined, AppstoreOutlined } from "@ant
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Select, Avatar, Popconfirm, Radio } from "antd";
+import { Layout, Avatar, Popconfirm, Radio, Tooltip } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -69,7 +69,7 @@ const routes = [
   {
     path: "/",
     exact: true,
-    title: () => "Home",
+    title: () => "FHIR Home",
     main: () => <HomePage />
   },
   {
@@ -79,7 +79,7 @@ const routes = [
   },
   {
     path: "/search",
-    title: () => "Advanced Search",
+    title: () => "Search",
     main: () => <SearchPage />
   }
 ];
@@ -139,15 +139,6 @@ class App extends React.Component {
 
               <div style={{ flexGrow: 1, textAlign: "right", paddingRight: "20px" }}>
                 <GlobalContextProvider>
-                  {/* <Select
-                    defaultValue="table"
-                    style={{ width: "135px" }}
-                    onChange={this.handleViewChange}
-                  >
-                    aaaa
-                    <Select.Option value="table">View as Table</Select.Option>
-                    <Select.Option value="card">View as Cards</Select.Option>
-                  </Select> */}
                   <Radio.Group
                     defaultValue="table"
                     onChange={e => {
@@ -157,10 +148,14 @@ class App extends React.Component {
                     size="small"
                   >
                     <Radio.Button value="table">
-                      <UnorderedListOutlined />
+                      <Tooltip placement="bottom" title="View patients in a table">
+                        <UnorderedListOutlined />
+                      </Tooltip>
                     </Radio.Button>
                     <Radio.Button value="card">
-                      <AppstoreOutlined />
+                      <Tooltip placement="bottom" title="View patients in cards">
+                        <AppstoreOutlined />
+                      </Tooltip>
                     </Radio.Button>
                   </Radio.Group>
                 </GlobalContextProvider>

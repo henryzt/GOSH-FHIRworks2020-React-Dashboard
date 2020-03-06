@@ -1,4 +1,5 @@
 {
+  "homepage": "https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard",
   "name": "fhir-dashboard",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.0.0",
     "antd-mobile": "^2.3.1",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-json-view": "^1.19.1",
@@ -19,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
