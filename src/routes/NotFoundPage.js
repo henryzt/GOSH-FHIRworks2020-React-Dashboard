@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import { Result, Button } from "antd";
-import { useLocation, useHistory, useRouteMatch } from "react-router-dom";
+import { useLocation, useHistory, useRouteMatch, Redirect } from "react-router-dom";
 
 const NotFoundPage = props => {
   const location = useLocation();
@@ -13,11 +13,11 @@ const NotFoundPage = props => {
   //add special redirect rule for gh pages
   if (
     window.location.hostname == "henryz00.github.io" &&
-    location.pathname.includes("/GOSH-FHIRworks2020-React-Dashboard") &&
-    location.hash == ""
+    location.hash === "" &&
+    (location.pathname == "/GOSH-FHIRworks2020-React-Dashboard" ||
+      location.pathname == "/GOSH-FHIRworks2020-React-Dashboard/")
   ) {
-    history.push("/#/");
-    return <div></div>;
+    return <Redirect to="/" />;
   }
 
   const returnHome = () => {
