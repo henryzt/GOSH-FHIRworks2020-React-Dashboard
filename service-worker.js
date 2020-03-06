@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/GOSH-FHIRworks2020-React-Dashboard/precache-manifest.7979c5d818260ad3fee0897fef38a15b.js"
+  "/GOSH-FHIRworks2020-React-Dashboard/precache-manifest.6b699514a0bc916a098c55c67871d38e.js"
 );
 
 self.addEventListener('message', (event) => {
