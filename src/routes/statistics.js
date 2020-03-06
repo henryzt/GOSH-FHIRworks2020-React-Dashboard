@@ -5,21 +5,50 @@ import { Result, Button, Row, Col, Card, message } from "antd";
 
 import { Doughnut, Bar, Pie, Polar, HorizontalBar } from "react-chartjs-2";
 
+// const bgColors = [
+//   "#0d7a44",
+//   "#089db6",
+//   "#063c45",
+//   "#0f021b",
+//   "#0bc1e3",
+//   "#0ced5c",
+//   "#058de7",
+//   "#0de989",
+//   "#0d3a0c",
+//   "#03c9d9",
+//   "#0b9d7c",
+//   "#01310d",
+//   "#013040"
+// ];
+// const bgColors = [
+//     "#FF6384",
+//     "#36A2EB",
+//     "#FFCE56",
+//     "#75daad",
+//     "#FF6633",
+//     "#FFB399",
+//     "#ad62aa",
+//     "#ed6663",
+//     "#05dfd7",
+//     "#ffbd69",
+//     "#00a8cc",
+//     "#ff677d"
+//   ];
 const bgColors = [
   "#FF6384",
   "#36A2EB",
   "#FFCE56",
   "#75daad",
-  "#FF6633",
-  "#FFB399",
-  "#ad62aa",
-  "#ed6663",
-  "#05dfd7",
-  "#ffbd69",
   "#00a8cc",
-  "#ff677d"
+  "#00a8cc",
+  "#00a8cc",
+  "#00a8cc",
+  "#00a8cc",
+  "#00a8cc",
+  "#00a8cc",
+  "#00a8cc"
 ];
-// const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
+const bgColorsHover = "#FF6384";
 
 const DisplayCard = ({ children, title }) => {
   return (
@@ -102,7 +131,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors
+          hoverBackgroundColor: bgColorsHover
         }
       ]
     };
@@ -119,7 +148,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover,
           label: "City"
         }
       ]
@@ -137,7 +166,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors
+          hoverBackgroundColor: bgColorsHover
         }
       ]
     };
@@ -154,7 +183,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover,
           label: "Number of people"
         }
       ]
@@ -172,7 +201,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors
+          hoverBackgroundColor: bgColorsHover
         }
       ]
     };
@@ -189,7 +218,7 @@ class StatisticsPage extends React.Component {
         {
           data: Object.values(occ),
           backgroundColor: bgColors,
-          hoverBackgroundColor: bgColors
+          hoverBackgroundColor: bgColorsHover
         }
       ]
     };
