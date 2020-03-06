@@ -108,13 +108,30 @@
 .overlay {
   z-index: 999;
   background: black;
-  opacity: 0.3;
+  opacity: 0.5;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
 }
+
+.overlay-anim-enter {
+  opacity: 0;
+}
+.overlay-anim-enter-active {
+  opacity: 0.5;
+  transition: opacity 200ms;
+}
+.overlay-anim-exit {
+  opacity: 0.5;
+}
+.overlay-anim-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+/* ----- */
 
 .statPadding {
   padding: 40px;

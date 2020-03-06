@@ -1,10 +1,14 @@
 import React from "react";
+import { CSSTransition } from "react-transition-group";
 
 const Overlay = props => {
-  if (props.show) {
-    return <div className={"overlay"}></div>;
-  }
-  return <div></div>;
+  return (
+    <div>
+      <CSSTransition unmountOnExit in={props.show} timeout={200} classNames="overlay-anim">
+        <div className={"overlay"}></div>
+      </CSSTransition>
+    </div>
+  );
 };
 
 export default Overlay;
