@@ -16,7 +16,7 @@ import { CaretDownOutlined } from "@ant-design/icons";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 
-import { Layout, Select, Avatar, Popconfirm } from "antd";
+import { Layout, Select, Avatar, Popconfirm, Radio } from "antd";
 import GlobalContextConsumer from "./components/GlobalContext";
 
 import { GlobalContext, GlobalContextProvider } from "./components/GlobalContext";
@@ -93,7 +93,7 @@ class App extends React.Component {
 
   handleViewChange = value => {
     const { setViewInCard } = this.context;
-    // console.log(setViewInCard, this.context);
+    console.log(setViewInCard, value, this.context);
     setViewInCard(value == "card");
   };
 
@@ -139,7 +139,7 @@ class App extends React.Component {
 
               <div style={{ flexGrow: 1, textAlign: "right", paddingRight: "20px" }}>
                 <GlobalContextProvider>
-                  <Select
+                  {/* <Select
                     defaultValue="table"
                     style={{ width: "135px" }}
                     onChange={this.handleViewChange}
@@ -147,7 +147,18 @@ class App extends React.Component {
                     aaaa
                     <Select.Option value="table">View as Table</Select.Option>
                     <Select.Option value="card">View as Cards</Select.Option>
-                  </Select>
+                  </Select> */}
+                  <Radio.Group
+                    defaultValue="table"
+                    onChange={e => {
+                      console.log(e);
+                      this.handleViewChange(e.target.value);
+                    }}
+                    size="small"
+                  >
+                    <Radio.Button value="table">Table</Radio.Button>
+                    <Radio.Button value="card">Card</Radio.Button>
+                  </Radio.Group>
                 </GlobalContextProvider>
                 <Popconfirm
                   placement="bottomRight"
