@@ -3,14 +3,14 @@ import Header from "../components/Header";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
 import { Result, Button, Row, Col, Card, message } from "antd";
 
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Bar } from "react-chartjs-2";
 
 const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
 const bgColorsHover = ["#FF6384", "#36A2EB", "#FFCE56"];
 
-const DisplayCard = ({ children }) => {
+const DisplayCard = ({ children, title }) => {
   return (
-    <Card style={{ width: "auto", margin: "10px" }} hoverable>
+    <Card style={{ width: "auto", margin: "10px" }} title={title} hoverable>
       {children}
     </Card>
   );
@@ -23,6 +23,25 @@ const findOccurence = (data, key) => {
     return sums;
   }, {});
   return occ;
+};
+
+const findTop = (data, topNum) => {
+  const findSumFuc = (total, num) => {
+    return total + num;
+  };
+  console.log(data);
+  const sum = Object.values(data).reduce(findSumFuc);
+  const keysSorted = Object.keys(data).sort((a, b) => {
+    return data[b] - data[a];
+  });
+  console.log(keysSorted);
+  let topData = keysSorted.slice(0, topNum).map(key => {
+    return { [keysSorted[key]]: data[key] };
+  });
+  const rest = sum - Object.values(topData).reduce(findSumFuc);
+  topData.other = rest;
+  console.log(topData);
+  return topData;
 };
 
 class StatisticsPage extends React.Component {
@@ -59,6 +78,23 @@ class StatisticsPage extends React.Component {
     return <Doughnut data={data} />;
   };
 
+  StateChart = () => {
+    const occ = findTop(findOccurence(this.state.patients, "city"), 5);
+    console.log(occ);
+    const data = {
+      labels: Object.keys(occ),
+      datasets: [
+        {
+          data: Object.values(occ),
+          backgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover
+        }
+      ]
+    };
+    console.log(occ);
+    return <Bar data={data} />;
+  };
+
   render() {
     return (
       <div>
@@ -67,7 +103,10 @@ class StatisticsPage extends React.Component {
           <div>
             <Row style={{ padding: "40px" }}>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={this.GenderChart()}></DisplayCard>
+                <DisplayCard children={this.GenderChart()} title="Gender"></DisplayCard>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                <DisplayCard children={this.StateChart()}></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={<div>language</div>}></DisplayCard>
@@ -77,9 +116,6 @@ class StatisticsPage extends React.Component {
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <DisplayCard children={<div>maritalStatus</div>}></DisplayCard>
-              </Col>
-              <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={<div>state</div>}></DisplayCard>
               </Col>
             </Row>
           </div>
