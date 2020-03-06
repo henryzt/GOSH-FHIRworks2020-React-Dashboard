@@ -29,7 +29,11 @@ class PatientsPage extends React.Component {
     let patientData = this.state.patients;
     if (this.props.filter && this.state.patients) {
       patientData = doFilter(this.state.patients, this.props.filter);
-      message.success({ content: `Found ${patientData.length} matching records`, duration: 3 });
+      if (patientData.length > 0) {
+        message.success({ content: `Found ${patientData.length} matching records`, duration: 3 });
+      } else {
+        message.warn({ content: `No records found`, duration: 3 });
+      }
     }
     return (
       <div>

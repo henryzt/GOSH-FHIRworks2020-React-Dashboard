@@ -83,7 +83,6 @@ class PatientsListDisplay extends React.Component {
       );
       layout = cardLayout;
     } else {
-      console.log("aaaaaaaa");
       let random = Math.random();
       // ---------------------------- Table view
       const tableLayout = (
