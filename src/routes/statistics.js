@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { getPatientList, parseAllPatientData } from "../javascript/api";
 import { Result, Button, Row, Col, Card, message } from "antd";
 
-import { Doughnut, Bar, Pie, Polar } from "react-chartjs-2";
+import { Doughnut, Bar, Pie, Polar, HorizontalBar } from "react-chartjs-2";
 
 const bgColors = ["#FF6384", "#36A2EB", "#FFCE56"];
 const bgColorsHover = ["#FF6384", "#36A2EB", "#FFCE56"];
@@ -150,6 +150,23 @@ class StatisticsPage extends React.Component {
     return <Bar data={data} />;
   };
 
+  MaritalStatusChart = () => {
+    const occ = findOccurence(this.state.patients, "maritalStatus");
+    console.log(occ);
+    const data = {
+      labels: Object.keys(occ),
+      datasets: [
+        {
+          data: Object.values(occ),
+          backgroundColor: bgColors,
+          hoverBackgroundColor: bgColorsHover
+        }
+      ]
+    };
+    console.log(occ);
+    return <HorizontalBar data={data} />;
+  };
+
   render() {
     return (
       <div>
@@ -170,7 +187,10 @@ class StatisticsPage extends React.Component {
                 <DisplayCard children={this.AgeChart()} title="Age Groups"></DisplayCard>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <DisplayCard children={<div>maritalStatus</div>}></DisplayCard>
+                <DisplayCard
+                  children={this.MaritalStatusChart()}
+                  title="Marital Status"
+                ></DisplayCard>
               </Col>
             </Row>
           </div>
