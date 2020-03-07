@@ -38,7 +38,7 @@ function requestObservation(id) {
   });
 }
 
-function request() {
+function requestPatientList() {
   return new Promise((resolve, reject) => {
     let localCache = localStorage.getItem("patients");
     if (localCache) {
@@ -71,7 +71,7 @@ function getPatientList(message) {
       // start load api, show loading
       const hideLoading = message.loading("Please wait, fetching patient data...", 0);
       try {
-        json = await request();
+        json = await requestPatientList();
         message.success({ content: "Patient data loaded!", duration: 2 });
       } catch (e) {
         json = getPatientDemo();
@@ -116,7 +116,7 @@ function parseAllPatientData(patients) {
 }
 
 export {
-  request,
+  requestPatientList,
   requestObservation,
   getPatientDemo,
   getObservationDemo,

@@ -1,12 +1,15 @@
 # FHIR Responsive React Dashboard
 
-## About
 
-This project is built for UCL COMP0016 FHIRworks Hackathon (by GOSH DRIVE and NHS England). The app provides an easy to use, responsive web and mobile dashboard interfaces for users to view, search and analyse FHIR datasets.
+This project is built at UCL COMP0016 FHIRworks Hackathon (for GOSH DRIVE and NHS England). The app provides an easy to use, responsive web and mobile dashboard interfaces for users to view, search and analyse FHIR datasets.
+
+## About
 
 ![img](screenshots/screenshot.png)
 
 [Run the app on github pages](https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard/) (Dynamic data won't load, local demo data will be used)
+
+---
 
 The app is built using:
 
@@ -16,9 +19,11 @@ The app is built using:
 
 With API and dataset:
 - [GOSH Drive Azure API](https://github.com/goshdrive/FHIRworks_2020)
-- [HL7 FHIR Standard](https://www.hl7.org/fhir/)
+- [HL7 FHIR Standard](https://www.hl7.org/fhir/) (Fast Healthcare Interoperability Resources Standard)
+- Home page icons from [Icons8](https://icons8.com/)
+- Part of the logo designed came from FHIR (R) Logo
 
-The theme of the project is `6. Responsive design app form pulling data from a series of FHIR records e.g. retrieving and flattening the data, from a front-end design`, however, it is also combined with `2. Graphing data` and `10. Searching`.
+The theme of the project is *"6. Responsive design app form pulling data from a series of FHIR records e.g. retrieving and flattening the data, from a front-end design"*, however, it is also combined with *"2. Graphing data"* and *"10. Searching"*.
 
 
 
@@ -27,19 +32,19 @@ The theme of the project is `6. Responsive design app form pulling data from a s
 ### Overview
 The dashboard prototype came with three main sections (Patient list viewer, Advanced Search, Statistics), utilising FHIR data strcuture and standards. 
 
-The user interface is built based on Ant Design library, with many customized CSS and modified designs. The UI is fully responsive, with a separate mobile tab menu for native mobile app experience. 
+The user interface is built based on React Ant Design library, with lots of self-customized CSS and modified designs. The UI is fully responsive, with a separate mobile tab menu for native mobile app experience. 
 
 ![img](screenshots/demo.gif)
 
 ### FHIR Data Viewer (With Raw Json viewer)
-The patient list can be viewed by a choice of table or card layout. In the table layout, the user can easily sort the entire database by clicking the table head, and view full patient observation in a popup drawer. 
+The patient list can be viewed by a choice of table or card layout. In the table layout, the user can easily sort or reorder the entire database by clicking the table head, and view full patient observation in a popup drawer. 
 
 For each observation entry, more advanced user can even view the raw FHIR json for more detailed info.
 
 ![img](screenshots/list.gif)
 
 ### Search
-Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite difficult to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be achieved. Additionally, `Exact match` function was written to better filter the results.
+Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite hard to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be achieved. Additionally, `Exact match` function was written to better filter the results.
 
 ![img](screenshots/search.gif)
 
@@ -49,7 +54,7 @@ Although this is not required in project (No.6) description, I would love to lea
 ![img](screenshots/stats.gif)
 
 ### Responsive Design
-The web app is fully responsive, down to every smaller detail. This is quite hard, as the ant design library doesn't came with responsive design. In addition, I have chosen a separate menu component for mobile and desktop (bottom tabbar and side menu), which will be enabled and disabled programmatically. By doing this, it will also make the process to migrate the app to a React native app much easier, which can be installed on native smart phone and tablets.
+The web app is fully responsive, down to every smaller detail. This is quite difficult to do as the ant design library doesn't came with responsive design, many css and media rule has to be re-written. In addition, I have chosen a separate menu component for mobile and desktop (bottom tabbar and side menu), which will be enabled and disabled programmatically. By doing this, it will also make the process to migrate the app to a React native app much easier, which can be installed on native smart phone and tablets.
 
 ![img](screenshots/responsive1.gif)
 
