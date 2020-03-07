@@ -7,7 +7,7 @@ This project is built at UCL COMP0016 FHIRworks Hackathon (for GOSH DRIVE and NH
 
 ![img](screenshots/screenshot.png)
 
-[Run the app on github pages](https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard/). The dotnet server API is hosted on [https://henryz.cc:5001/api/](https://henryz.cc:5001/api/) from the repo [GOSH Drive Azure API](https://github.com/goshdrive/FHIRworks_2020).
+[Run the app on github pages](https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard/). The dotnet server API is hosted on [https://henryz.cc:5001/api/](https://henryz.cc:5001/api/Patient) from the repo [FHIRworks_2020](https://github.com/goshdrive/FHIRworks_2020).
 
 ---
 
