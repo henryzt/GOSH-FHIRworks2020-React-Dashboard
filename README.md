@@ -2,20 +2,21 @@
 
 ## About
 
-This project is built for COMP0016 FHIRworks Hackathon (FHIRworks open source packages for GOSH DRIVE and NHS England). The app provides an easy to use, responsive web and mobile dashboard interfaces for users to view, search and analyse FHIR datasets.
-
+This project is built for UCL COMP0016 FHIRworks Hackathon (by GOSH DRIVE and NHS England). The app provides an easy to use, responsive web and mobile dashboard interfaces for users to view, search and analyse FHIR datasets.
 
 ![img](screenshots/screenshot.png)
 
 [Run the app on github pages](https://henryz00.github.io/GOSH-FHIRworks2020-React-Dashboard/) (Dynamic data won't load, local demo data will be used)
 
-This web app is built using:
+The app is built using:
 
 - [React.js](https://reactjs.org/) + [React Router](https://reacttraining.com/react-router/)
 - [Ant Design](https://ant.design/)
-- [HL7 FHIR Standard](https://www.hl7.org/fhir/)
 - [Chart.js React](https://github.com/jerairrest/react-chartjs-2)
 
+With API and dataset:
+- [GOSH Drive Azure API](https://github.com/goshdrive/FHIRworks_2020)
+- [HL7 FHIR Standard](https://www.hl7.org/fhir/)
 
 The theme of the project is `6. Responsive design app form pulling data from a series of FHIR records e.g. retrieving and flattening the data, from a front-end design`, however, it is also combined with `2. Graphing data` and `10. Searching`.
 
@@ -24,7 +25,9 @@ The theme of the project is `6. Responsive design app form pulling data from a s
 ## Screenshots
 
 ### Overview
-The dashboard prototype came with three main sections (Patient list viewer, Advanced Search, Statistics), utilising FHIR data strcuture and standards. The web app is fully responsive, with a separate mobile tab menu for native mobile app experience.
+The dashboard prototype came with three main sections (Patient list viewer, Advanced Search, Statistics), utilising FHIR data strcuture and standards. 
+
+The user interface is built based on Ant Design library, with many customized CSS and modified designs. The UI is fully responsive, with a separate mobile tab menu for native mobile app experience. 
 
 ![img](screenshots/demo.gif)
 
@@ -36,12 +39,12 @@ For each observation entry, more advanced user can even view the raw FHIR json f
 ![img](screenshots/list.gif)
 
 ### Search
-Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite difficult to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be acheived.
+Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite difficult to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be achieved. Additionally, `Exact match` function was written to better filter the results.
 
 ![img](screenshots/search.gif)
 
 ### Statistics
-Although this is not required in project (No.6) description, I would love to learn and utilizing chart.js with React to visiualize dataset like FHIR. A filter and restructure function has been written to manipulate the raw FHIR data and making it easier to be analyzied in the app.
+Although this is not required in project (No.6) description, I would love to learn and utilizing chart.js with React to visualize dataset like FHIR. A filter and restructure function has been written to manipulate the raw FHIR data and making it easier to be analyzed in the app.
 
 ![img](screenshots/stats.gif)
 
