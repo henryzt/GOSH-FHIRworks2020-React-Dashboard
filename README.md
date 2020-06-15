@@ -36,7 +36,7 @@ The user interface is built based on React Ant Design library, with lots of self
 
 ![img](screenshots/demo.gif)
 
-### FHIR Data Viewer (With Raw Json viewer)
+### FHIR Data Explorer
 The patient list can be viewed by a choice of table or card layout. In the table layout, the user can easily sort or reorder the entire database by clicking the table head, and view full patient observation in a popup drawer. 
 
 For each observation entry, more advanced user can even view the raw FHIR json for more detailed info.
@@ -44,17 +44,17 @@ For each observation entry, more advanced user can even view the raw FHIR json f
 ![img](screenshots/list.gif)
 
 ### Search
-Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite hard to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be achieved. Additionally, `Exact match` function was written to better filter the results.
+Due to the extensiveness of FHIR data structure, each search rule has to be carefully written, thus it is quite hard to write an advanced search function with these many data inputs. However, with the help of the antd library, quite promising results can still be achieved. Additionally, the user can also use `Exact match` function to filter more strict matching result.
 
 ![img](screenshots/search.gif)
 
 ### Statistics
-Although this is not required in project (No.6) description, I would love to learn and utilizing chart.js with React to visualize dataset like FHIR. A filter and restructure function has been written to manipulate the raw FHIR data and making it easier to be analyzed in the app.
+[Chart.js React](https://github.com/jerairrest/react-chartjs-2) is used for data visualization. A filter and restructure function has been written to manipulate the raw FHIR data and making it easier to be analyzed in the app.
 
 ![img](screenshots/stats.gif)
 
 ### Responsive Design
-The web app is fully responsive, down to every smaller detail. This is quite difficult to do as the ant design library doesn't came with responsive design, many css and media rule has to be re-written. In addition, I have chosen a separate menu component for mobile and desktop (bottom tabbar and side menu), which will be enabled and disabled programmatically. By doing this, it will also make the process to migrate the app to a React native app much easier, which can be installed on native smart phone and tablets.
+The web app is fully responsive, down to every smaller detail. To achieve this, a lot of CSS and media rule has to be re-written. In addition, a separate menu component for mobile and desktop (bottom tab bar using React Native component and side menu using standard React), which will be enabled and disabled programmatically. By doing this, it will also make the process to migrate the app to a React native app much easier, which means the web app can be easily installed on native smartphone and tablets.
 
 ![img](screenshots/responsive1.gif)
 
